@@ -33,6 +33,7 @@
     "vinyl-source-stream": "^1.1.0"
   },
   "dependencies": {
+    "gulp-svg-sprites": "^4.0.2",
     "normalize.css": "~5.0.0"
   }
 }

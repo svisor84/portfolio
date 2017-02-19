@@ -1,0 +1,62 @@
+.l-hero{
+  background-color: darkgrey;
+  height: 300px;
+}
+.socials__item{
+  float:left;
+  margin: 10px;
+}
+ul{
+  list-style: none;
+}
+.hamburger__bg{
+  float:right;
+  margin:10px
+}
+.c-user__pic{
+  width: 100px;
+  border-radius: 50%;
+}
+.l-about__col{
+  float:left;
+}
+.c-user{
+  margin: 75px auto;
+  width: 400px;
+}
+.l-about__col{
+  width:900px;
+  height: 700px;
+  margin-top: -159px;
+}
+.l-about__col_left{
+  background-image:url("/assets/img/icons/about_bg_left.svg");
+}
+.l-about__col_right{
+  background-image:url("/assets/img/icons/about_bg_right.svg");
+}
+.c-section-title{
+  margin: 200px 20%;
+  float: left;
+  width: auto;
+}
+.c-about{
+  margin-top:200px;
+}
+.c-about__pic{
+  width:250px;
+}
+.c-block-title{
+  margin: 200px 20% 50px 20%;
+  width: auto;
+}
+.l-skills__text{
+  margin-top: 20px;
+}
+.c-skill-group__item{
+  float:left;
+  width:100%;
+}
+.l-skiil-list__item{
+  float:left;
+}
