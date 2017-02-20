@@ -1,0 +1,17 @@
+-
+    var icons = [
+        {
+            title:'vk',
+            link:'#'
+        },
+        {
+            title:'github',
+            link:'#'
+        }
+    ]
+
+each icon in icons
+    li.social__item
+        a(href=icon.link).social__link
+            svg.social__icon
+                use(xlink:href=`assets/img/sprite.svg#`+icon.title)

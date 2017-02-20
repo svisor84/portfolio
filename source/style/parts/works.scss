@@ -1,0 +1,23 @@
+.my-work__title {
+  float: left;
+  position: relative;
+  width: 100%;
+  padding: 53px 0;
+  text-align: center;
+  background: #faf8f0;
+  color: #373e42;
+  font-size: 63px;
+  font-family: BERNIERRegular-Regular;
+  &:before,
+  &:after {
+    content: '-';
+    color: #000;
+    opacity: 0.3;
+  }
+  &__img-wrapper {
+    position: absolute;
+    left: 50%;
+    top: 0;
+    margin-left: -253px;
+  }
+}

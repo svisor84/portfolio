@@ -1,0 +1,387 @@
+.welcome {
+  background: url('../../assets/img/bground/welcome_mountains_1800.png');
+  overflow: hidden;
+  min-height: 100%;
+  width: 100%;
+  position: relative;
+  @include cover();
+}
+
+.authorize {
+  position: absolute;
+  right: 0;
+  text-decoration: none;
+  border: 2px solid rgba($white, 0.7);
+  border-radius: 4px;
+  font-size: 16px;
+  @include roboto(medium);
+  padding: 11.5px 27px;
+  color: rgba($white, 0.7);
+  float: right;
+  margin-right: 100px;
+  margin-top: 24px;
+  &:hover {
+    color: rgba(#07ab98, 0.85);
+    background: rgba($white, 0.9);
+  }
+}
+
+.developer {
+  min-width: 380px;
+  min-height: 394px;
+  overflow: hidden;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  background: rgba(252, 252, 252, 0.75);
+  text-align: center;
+  border-radius: 4px;
+  &__avatar {
+    margin-top: 40px;
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    margin-bottom: 24px;
+  }
+  &__name {
+    @include roboto(medium);
+    font-size: 28px;
+    color: $light_grey;
+  }
+  &__info {
+    @include roboto(regular);
+    font-size: 16px;
+    color: $light_grey;
+    margin-bottom: 35px;
+  }
+}
+
+.social__list {
+  text-align: center;
+  padding: 0;
+  font-size: 0;
+  margin-bottom: 42px;
+  &__item {
+    display: inline-block;
+    padding: 0 20px;
+  }
+  &__link {
+    font-size: 30px;
+    text-decoration: none;
+    color: rgba(#6fd1c6, 0.9);
+    &:hover {
+      color: $light_green;
+    }
+  }
+}
+
+.page-nav {
+  font-size: 0;
+  width: 100%;
+  height: 45px;
+  &__item {
+    display: inline-block;
+  }
+  &__link {
+    display: block;
+    font-size: 16px;
+    background: rgba(#07ab98, 0.7);
+    padding: 13px 32px;
+    text-decoration: none;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    color: $white;
+    &:hover {
+      background: rgba(#268b8b, 0.8);
+    }
+    &_work {
+      border-right: 1px solid #73c8c0;
+    }
+    &_about-me {
+      border-right: 1px solid #73c8c0;
+      border-left: 1px solid #73c8c0;
+    }
+    &_blog {
+      border-left: 1px solid #73c8c0;
+    }
+  }
+}
+
+.authorize-form {
+  min-width: 380px;
+  min-height: 394px;
+  overflow: hidden;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  background: rgba(252, 252, 252, 0.75);
+  text-align: center;
+  border-radius: 4px;
+  &__title {
+    margin: 38px 0;
+    text-align: center;
+    width: 100%;
+    font-size: 35px;
+    font-family: BERNIERRegular-Regular; //TODO
+    line-height: 27px;
+    color: $light_grey;
+    &:before,
+    &:after {
+      content: ' - ';
+      color: #000;
+      opacity: 0.3;
+      font-size: 35px;
+    }
+  }
+  &__conteiner {
+
+  }
+  &__style {
+    position: relative;
+    width: 340px;
+    font-size: 16px;
+    @include roboto('light');
+    color: #373e42;
+    border-radius: 5px;
+    background: $white;
+    border: none;
+    padding: 13px 20px 13px 65px;
+    &:focus {
+      outline: 0;
+    }
+  }
+}
+
+.input-login {
+  position: relative;
+  overflow: hidden;
+  border-radius: 5px;
+  margin: 0 20px 20px 20px;
+  font-size: 18px;
+  color: #747c83;
+  line-height: 1.8;
+  &__font-image {
+    position: absolute;
+    width: 45px;
+    height: 45px;
+    padding: 12px;
+    color: #c4cbcd;
+    background: #f0efe9;
+    top: 0;
+    left: 0;
+  }
+}
+
+.checkbox {
+  color: $light_grey;
+  @include roboto(light);
+  font-size: 16px;
+  margin: 0 0 16px 0;
+  &__input {
+    display: none;
+    &:checked + .checkbox__label {
+      &:before {
+        background: $light_green;
+        border: 2px solid $light_green;
+      }
+      &:after {
+        content: "";
+        width: 10px;
+        height: 10px;
+        display: inline-block;
+        //background: url('../../assets/img/content/checkmark.png') no-repeat; //TODO
+        position: absolute;
+        left: 5px;
+        bottom: 4px;
+      }
+    }
+  }
+  &__label {
+    position: relative;
+    &:hover {
+      cursor: pointer;
+    }
+    &:before {
+      content: "";
+      width: 16px;
+      height: 16px;
+      display: inline-block;
+      border: 2px solid #d9d9d9;
+      border-radius: 1px;
+      margin-right: 16px;
+      vertical-align: bottom;
+    }
+    &:after {
+      content: "";
+      width: 16px;
+      height: 16px;
+      display: inline-block;
+      background: $white;
+      position: absolute;
+      left: 2px;
+      bottom: 2px;
+    }
+  }
+}
+
+.radio {
+  color: $light_grey;
+  @include roboto(light);
+  font-size: 16px;
+  margin: 0 0 48px 0;
+  &__input {
+    display: none;
+    &:checked + .radio__label {
+      &:after {
+        content: "";
+        width: 8px;
+        height: 8px;
+        display: inline-block;
+        background: $light_green;
+        border-radius: 50%;
+        position: absolute;
+        left: 6px;
+        bottom: 6px;
+      }
+    }
+  }
+  &__label {
+    position: relative;
+    margin: 0 16px;
+    &:hover {
+      cursor: pointer;
+    }
+    &:before {
+      content: "";
+      width: 16px;
+      height: 16px;
+      display: inline-block;
+      border: 2px solid #d9d9d9;
+      border-radius: 50%;
+      margin-right: 16px;
+      vertical-align: bottom;
+      background: $white;
+    }
+    &:after {
+      content: "";
+      width: 16px;
+      height: 16px;
+      display: inline-block;
+      background: $white;
+      border-radius: 50%;
+      position: absolute;
+      left: 2px;
+      bottom: 2px;
+    }
+  }
+}
+
+.question {
+  color: $light_grey;
+  @include roboto(bold);
+  font-size: 16px;
+  margin: 0 0 16px 0;
+}
+
+.authorize-btn {
+  &__item {
+    float: left;
+    width: 192px;
+    border: none;
+    font-size: 16px;
+    @include roboto(medium);
+    background: rgba(#07ab98, 0.7);
+    color: rgba($white, 0.8);
+    padding: 13px 0;
+    text-align: center;
+    outline: none;
+    &:hover {
+      background: rgba(#268b8b, 0.8);
+      color: $white;
+      cursor: pointer;
+    }
+    &:active {
+      outline: 0;
+    }
+    &_submit {
+      border-left: 1px solid #73c8c0;
+    }
+    &_home {
+      border-right: 1px solid #73c8c0;
+      &:focus {
+        outline: 0;
+      }
+    }
+
+  }
+}
+
+.copyright-authorize {
+  position: absolute;
+  bottom: 40px;
+  width: 100%;
+  text-align: center;
+  @include roboto(light);
+  font-size: 16px;
+  color: $white;
+}
+
+/* контейнер и перспектива */
+.flip-container {
+  perspective: 1000px;
+
+  position: absolute;
+  top: 50%;
+  bottom: 0;
+  right: 0;
+  left: 50%;
+  margin: -196px 0 0 -190px;
+
+}
+
+.flip-container {
+  min-width: 380px;
+  min-height: 388px;
+  max-width: 388px;
+  max-height: 418px;
+
+}
+
+//TODO
+/* разворот контейнера при наведении */
+//.flip-container .flipper, .flip-container.hover .flipper {
+//  transform: rotateY(0deg);
+//}
+
+/* скорость поворота */
+//.flipper {
+//  transition: 0.6s;
+//  transform-style: preserve-3d; /*flat*/
+//  position: relative;
+//}
+
+/* прячем спину */
+.developer, .authorize-form {
+  backface-visibility: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+
+}
+
+/* прячем фронт */
+//.developer {
+//  //z-index: 2;
+//  /* for firefox 31 */
+//  transform: rotateY(0deg);
+//}
+
+/* прячем бек */
+.authorize-form {
+  transform: rotateY(180deg);
+}
+
+//
+//.rotate-authorize {
+//  transform: rotateY(180deg) !important;
+//}

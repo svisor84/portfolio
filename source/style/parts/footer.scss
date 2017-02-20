@@ -1,0 +1,84 @@
+.page-footer {
+  width: 100%;
+  background: rgba(#555b5e, 0.9);
+  position: relative;
+  overflow: hidden;
+  height: 141px;
+}
+
+.footer-nav {
+  float: left;
+  font-size: 0;
+  margin-left: 10px;
+
+  &__item {
+    display: inline-block;
+    padding: 30px 20px;
+    @include roboto(medium)
+  }
+  &__link {
+    font-size: 16px;
+    line-height: 13px;
+    color: $white;
+    text-decoration: none;
+  }
+}
+
+.footer-social {
+  float: right;
+  font-size: 0;
+  margin: 21px 30px 0 0;
+  &__item {
+    display: inline-block;
+    width: 36px;
+    height: 36px;
+    margin-left: 10px;
+    border-radius: 50%;
+    border: 1px solid rgba(252, 252, 252, 0.9);
+    text-align: center;
+    padding: 4px 0px 0 0;
+    &:hover {
+      transition-duration: 0.6s;
+      border: 1px solid $white;
+      background: $white;
+    }
+  }
+  &__link {
+    font-size: 23px;
+    padding: 5.5px;
+    color: rgba(252, 252, 252, 0.7);
+    &:hover {
+      color: rgba(#555b5e, 0.9);
+      transition-duration: 0.5s;
+    }
+  }
+  &_social-icon{
+    width:40px;
+  }
+
+}
+
+.footer__nav_wrapper, .footer__about-me_wrapper {
+  border-bottom: 1px solid rgba(252, 252, 252, 0.9);
+}
+
+.footer__about_wrapper {
+  padding: 16px 30px;
+}
+
+.footer__about, .copyright {
+  font-size: 16px;
+  line-height: 17px;
+  color: $white;
+  @include roboto(light);
+}
+
+.footer__about {
+  float: left;
+  width: 436px;
+}
+
+.copyright {
+  float: right;
+  padding: 0.5% 0;
+}

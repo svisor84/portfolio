@@ -1,0 +1,35 @@
+-
+    var skills = [
+    {
+        title: 'Frontend',
+        tech: [
+            {name: 'HTML5'},
+            {name: 'CSS3'},
+            {name: 'JavaScript'}
+        ]
+    },
+    {
+        title: 'Backend',
+        tech: [
+            {name: 'PHP'},
+            {name: 'mySQL'},
+            {name: 'Node.js'}
+        ]
+    },
+    {
+        title: 'WorkFlow',
+        tech: [
+            {name: 'Git'},
+            {name: 'Gulp'}
+        ]
+    }
+    ]
+
+each skill in skills
+    p.prog #{skill.title}
+    ul.prog__items
+        each tech in skill.tech
+            li.prog__tech #{tech.name}
+                svg.circle
+                    circle.circle__out
+                    circle.circle__in.circle__in_html( transform='rotate(-90 55 55)')

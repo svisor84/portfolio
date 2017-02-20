@@ -1,0 +1,130 @@
+.skills {
+  float: left;
+  width: 50%;
+  background: #eeebdf;
+  padding: 20px 0 29px 38px;
+  &__title_hyphen {
+    margin-bottom: 16px;
+    &:before,
+    &:after {
+      content: ' - ';
+      color: #000;
+      opacity: 0.3;
+      font-size: 35px;
+    }
+  }
+  &__title {
+    font-family: BERNIERRegular-Regular;
+    font-size: 35px;
+    color: #455a64;
+    text-align: center;
+    line-height: 25px;
+    margin-right: 38px;
+  }
+  &__description {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    color: #455a64;
+    margin: 40px 38px 50px 0;
+  }
+}
+
+.prog {
+  font-size: 28px;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+  line-height: 17px;
+  color: #455a64;
+  margin-bottom: 20px;
+  &__items {
+    font-size: 0;
+  }
+  &__tech {
+    position: relative;
+    display: inline-block;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    font-size: 12.8px;
+    color: #10c1a8;
+    width: 110px;
+    height: 110px;
+    text-align: center;
+    vertical-align: middle;
+    margin-right: 40px;
+    padding: 47px 0;
+    margin-bottom: 40px;
+    &:last-child {
+      margin-right: 0;
+    }
+    &__js {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      margin: -14px 0 0 -29px;
+      width: 59px;
+    }
+    &__node {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      margin: -14px 0 0 -27px;
+      width: 55px;
+    }
+  }
+}
+
+.circle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: -55px 0 0 -55px;
+  width: 110px;
+  height: 110px;
+  fill: none;
+  stroke-width: 20;
+  &__out {
+    stroke: #ccc;
+    r: 45;
+    cx: 50%;
+    cy: 50%;
+    fill: none;
+  }
+  &__in {
+    stroke: #00bfa5;
+    r: 45;
+    cx: 50%;
+    cy: 50%;
+    transform: rotate(90deg, 50%, 50%);
+    &_html {
+      stroke-dasharray: 230.6 314;
+    }
+    &_css {
+      stroke-dasharray: 230.6 314;
+    }
+    &_js {
+      stroke-dasharray: 143.6 314;
+    }
+    &_php {
+      stroke-dasharray: 2.6 314;
+    }
+    &_sql {
+      stroke-dasharray: 0.6 314;
+    }
+    &_node {
+      stroke-dasharray: 60.6 314;
+    }
+    &_mongo {
+      stroke-dasharray: 0.6 314;
+    }
+    &_git {
+      stroke-dasharray: 143.6 314;
+    }
+    &_gulp {
+      stroke-dasharray: 143.6 314;
+    }
+    &_bower {
+      stroke-dasharray: 80.6 314;
+    }
+  }
+}

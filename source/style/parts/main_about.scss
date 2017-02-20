@@ -1,0 +1,66 @@
+.page-main {
+  background: #efeee9;
+}
+
+.about-me {
+  float: left;
+  width: 50%;
+  background: #efeee9;
+  text-align: center;
+  &__title {
+    float: left;
+    position: relative;
+    width: 49.1%;
+    color: #373e42;
+    font-size: 63px;
+    font-family: BERNIERRegular-Regular;
+    &:before,
+    &:after {
+      content: '-';
+      color: #000;
+      opacity: 0.3;
+    }
+    &__img {
+      position: absolute;
+      left: 50%;
+      top: -36px;
+      margin-left: -176px;
+    }
+  }
+  &__detail {
+    float: left;
+    width: 50%;
+    &-img {
+      margin-top: 20px;
+      max-width: 450px;
+    }
+    &-avatar {
+      width: 100%;
+      height: auto;
+    }
+    &-title {
+      margin: 40px auto;
+      font-size: 35px;
+      font-family: BERNIERRegular-Regular;
+      line-height: 27px;
+      color: #455a64;
+      text-align: center;
+      &:before,
+      &:after {
+        content: ' - ';
+        color: #000;
+        opacity: 0.3;
+        font-size: 35px;
+      }
+    }
+    &-text {
+      max-width: 396px;
+      font-size: 16px;
+      font-family: 'Roboto', sans-serif;
+      font-weight: 400;
+      color: #455a64;
+      text-align: left;
+      margin-bottom: 14px;
+    }
+  }
+}

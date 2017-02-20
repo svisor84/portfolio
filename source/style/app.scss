@@ -1,6 +1,33 @@
-body {
-  margin: auto;
-  width:1800px;
-}
+// colors
 
-@import 'common/greating';
+$light_green: #00bfa5;
+$dark_green: #009688;
+$light_grey: #455a64;
+$dark_grey: #373e42;
+$red: #e44845;
+$grey: #53595d;
+$white: #fff;
+
+// setups
+@import 'main/common.scss';
+@import 'main/fonts.scss';
+@import 'main/layout.scss';
+@import 'main/mixins.scss';
+
+// partials
+@import 'parts/feedback.scss';
+@import 'parts/footer.scss';
+@import 'parts/header_about.scss';
+@import 'parts/main_about.scss';
+@import 'parts/works.scss';
+
+// pages
+@import 'pages/welcome.scss';
+
+// components
+@import 'components/contacts.scss';
+@import 'components/header_socials.scss';
+@import 'components/menu.scss';
+@import 'components/portfolio_slider.scss';
+@import 'components/preloader.scss';
+@import 'components/skills.scss';

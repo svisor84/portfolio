@@ -1,0 +1,17 @@
+-
+    var icons = [
+    {
+    title:'vk',
+    link:'#'
+    },
+    {
+    title:'github',
+    link:'#'
+    }
+    ]
+
+each icon in icons
+    li.footer-social__item
+        a(href=icon.link class='footer-social__link footer-social__link_vk')
+            svg.footer-social_social-icon
+                use(xlink:href=`assets/img/sprite.svg#`+icon.title+`_round`)

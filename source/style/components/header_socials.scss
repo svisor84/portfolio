@@ -1,0 +1,21 @@
+.social {
+  float: left;
+  padding: 28px 0 0 30px;
+  font-size: 0;
+  &__item {
+    display: inline-block;
+    vertical-align: top;
+  }
+  &__link {
+    margin-right: 31px;
+    font-size: 26px;
+    color: rgba(252, 252, 252, 0.6);
+    &:hover {
+      color: #fff;
+      transition-duration: 0.3s;
+    }
+  }
+  &__icon {
+    width:48px;
+  }
+}

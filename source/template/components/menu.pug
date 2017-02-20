@@ -1,0 +1,30 @@
+-
+    var my_pages = [
+        {
+            link:'portfolio.html',
+            title:'Мои работы'
+        },
+        {
+            link:'about.html',
+            title:'Обо мне'
+        },
+        {
+            link:'blog.html',
+            title:'Блог'
+        },
+        {
+            link:'index.html',
+            title:'Авторизация'
+        }
+
+    ]
+
+.menu
+    .menu__link
+        .band
+        .band
+        .band
+    ul.menu__list
+        each page in my_pages
+        li.menu__list__item
+            a(href=page.link class='menu__list__link') page.title

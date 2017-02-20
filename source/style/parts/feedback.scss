@@ -1,0 +1,186 @@
+.page-form {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  min-height: 1130px;
+  //background: url('../../assets/img/bg/portfolio_mountains-sea_1800.png') no-repeat center;
+  background-size: cover;
+}
+
+.say-about-me__title {
+  text-align: center;
+  width: 100%;
+  font-size: 63px;
+  font-family: BERNIERRegular-Regular;
+  line-height: 35px;
+  color: #455a64;
+  &_hyphen {
+    margin: 68px 0 20px 0;
+    &:before,
+    &:after {
+      content: ' - ';
+      color: #000;
+      opacity: 0.3;
+      font-size: 35px;
+    }
+  }
+  &__img-wrapper {
+    position: absolute;
+    left: 50%;
+    top: 23px;
+    margin-left: -249.5px;
+  }
+}
+
+// ОТЗЫВЫ
+.reviews {
+  margin: 70px auto;
+  max-width: 750px;
+  &__left-wrapper {
+    float: left;
+    width: 50%;
+  }
+  &__quotes {
+    color: #dde0e0;
+    font-size: 33px;
+    margin-bottom: 30px;
+  }
+  &__quote__text {
+    @include roboto(regular);
+    font-size: 16px;
+    color: #455a64;
+    margin-bottom: 28px;
+  }
+  &__human__photo {
+    float: left;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    overflow: hidden;
+  }
+  &__human__detail {
+    float: left;
+    margin: 20px 0 0 20px;
+    width: 270px;
+    color: #20b5a1;
+    font-size: 16px;
+    @include roboto(regular);
+  }
+  &__human__name {
+    font-weight: 700;
+  }
+  &__human__about {
+    font-weight: 300;
+
+  }
+  // СТИЛИ ДЛЯ ФОРМЫ
+}
+
+.feedback {
+  position: relative;
+  overflow: hidden;
+  width: 380px;
+  min-height: 438px;
+  margin: 0 auto;
+  border-radius: 4px;
+  &__title {
+    margin: 38px 0;
+    text-align: center;
+    width: 100%;
+    font-size: 35px;
+    font-family: BERNIERRegular-Regular;
+    line-height: 27px;
+    color: #455a64;
+    &:before,
+    &:after {
+      content: ' - ';
+      color: #000;
+      opacity: 0.3;
+      font-size: 35px;
+    }
+
+  }
+  &__wrapp-blur {
+    position: absolute;
+    top: -469px;
+    width: 100%;
+    height: 910px;
+  }
+  &__blur {
+    position: absolute;
+    bottom: -46px;
+    background: url('../../assets/img/bg/portfolio_mountains-sea_1800.png') no-repeat center;
+    background-size: 1903px;
+    background-position: center;
+    height: 910px;
+    width: 100%;
+    filter: blur(20px);
+  }
+  &__wrapp-forms {
+    position: relative;
+    top: 0;
+  }
+}
+
+.form__style {
+  width: 300px;
+  margin: 0 20px 20px 20px;
+  font-size: 16px;
+  @include roboto(light);
+  color: #373e42;
+  border-radius: 5px;
+  background: #fff;
+  border: none;
+  padding: 13px 20px;
+  &_message {
+    resize: none;
+  }
+
+}
+
+.form__btn {
+  &__item {
+    float: left;
+    width: 190px;
+    border: none;
+    font-size: 16px;
+    @include roboto(medium);
+    background: #26bbaa;
+    color: rgba(#fff, 0.8);
+    padding: 13px 0;
+    text-align: center;
+    outline: none;
+    &:hover {
+      background: #268b8b;
+      color: #fff;
+      cursor: pointer;
+    }
+    &:active {
+      outline: 0;
+    }
+    &_submit {
+      border-right: 1px solid #82cfc9;
+    }
+    &_clear {
+      border-left: 1px solid #82cfc9;
+      &:focus {
+        outline: 0;
+      }
+    }
+
+  }
+}
+
+//- КОНЕЦ ФОРМЫ
+.page-up {
+  display: block;
+  height: 26px;
+  width: 26px;
+  margin: 70px 0 70px 49.3%;
+  font-size: 26px;
+  color: rgba(252, 252, 252, 0.6);
+  &:hover {
+    color: #fff;
+    transition-duration: 0.5s;
+  }
+}

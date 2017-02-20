@@ -1,0 +1,32 @@
+-
+    var contacts = [
+        {
+            title:'ctac48rus',
+            name:'skype'
+        },
+        {
+            title:'stnslvmukhin@gmail.com',
+            name: 'email'
+        },
+        {
+            title:'+7(926)262-8741',
+            name: 'phone'
+        },
+        {
+            title:'Одинцово',
+            name: 'city'
+        }
+    ];
+
+.page-contact
+    .contact-list
+        p.contact-list__title КОНТАКТЫ
+        ul.contact-list__detail
+            each contact in contacts
+                li.contact-list__detail-item
+                    a(href=contact.title class='contact-list__detail-item-img contact-list__detail__item_skype')
+                        svg.footer-social_social-icon
+                            use(xlink:href=`assets/img/sprite.svg#`+contact.name)
+
+
+

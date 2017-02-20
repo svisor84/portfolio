@@ -1,75 +1,24 @@
-extends ../_template
+extends ../layouts/layout
+
 
 
 block variables
-    - var title = 'My Portofolio'
-    - var FrontEnd_skills = ['HTML5', 'CSS3', 'JavaScript']
-    - var BackEnd_skills = ['PHP', 'Node.js', 'MySQL', 'MongoDB']
-    - var WorkFlow_skills = ['git', 'Gulp', 'WebPack']
+    - var title = 'Обо мне'
 
-    // prefix
-        l - layout
-        c - component
+    //разбито все на блоки, чтобы можно было подключить каждый по отдельности
+    // подключаю шапку
 
+block header
+    include ../parts/header_about
 
+    // подключаю основную часть
+block main
+    include ../parts/main_about
+
+    // подключаю блок с контактами
 block content
-    .wrapper
-        section.l-section.l-hero
-            ul.socials
-                li.socials__item
-                    a(href="https://vk.com/id87386895").socials__link
-                        img(src="/assets/img/icons/vk.svg")
-                li.socials__item
-                    a(href="https://github.com/svisor84").socials__link
-                        img(src="/assets/img/icons/github.svg")
-            .hamburger
-                img(src="/assets/img/icons/hamburger.svg").hamburger__bg
-            .l-hero__bg
-            .l-hero__container
-                img.c-hero__title-pic
-                .c-user
-                    img(src="/assets/img/iam.jpeg").c-user__pic
-                    .c-user__name Станислав Мухин
-                    .c-user__occ Личный сайт веб-разработчика
-        section.l-section.l-about
-            .l-about__col.l-about__col_left
-                //img(src="/assets/img/icons/about_bg_left.svg").l-about__triangle
-                .c-section-title обо мне
-                .c-about
-                    img(src="/assets/img/iam.jpeg").c-about__pic
-                    .c-block-about-title кто я
-                    .c-block-text здесь будет текст обо мне
+    include ../components/contacts
 
-            .l-about__col.l-about__col_right
-                //img(src="/assets/img/icons/about_bg_right.svg").l-about__triangle
-                .l-skills
-                .c-block-title чем я могу быть вам полезен
-                .l-skills__text
-                    p Больше всего меня привлекает FrontEnd разработка, но также я могу решать задачи на BackEnd
-                ul.c-skills-group
-                    li.c-skill-group__item
-                        .c-skills-group__title FrontEnd
-                        ul.l-skills-list
-                            each fe_item in FrontEnd_skills
-                                li.l-skill-list__item
-                                    .c-skill
-                                        //svg.c-skill__circle
-                                        .c-skill__title=fe_item
-                    li.c-skill-group__item
-                        .c-skills-group__title BackEnd
-                        ul.l-skills-list
-                            each be_item in BackEnd_skills
-                                li.l-skill-list__item
-                                    .c-skill
-                                        //svg.c-skill__circle
-                                        .c-skill__title=be_item
-                    li.c-skill-group__item
-                        .c-skills-group__title WorkFlow
-                        ul.l-skills-list
-                            each wf_item in WorkFlow_skills
-                                li.l-skill-list__item
-                                    .c-skill
-                                        //svg.c-skill__circle
-                                        .c-skill__title=wf_item
-        section.l-section.l-map
-        //a(href="https://yandex.ru/maps/?um=constructor%3ApVxn7ZLvhxkzVZST0eNlwtlGO8E5Upd4&amp;source=constructorStatic" target="_blank"><img src="https://api-maps.yandex.ru/services/constructor/1.0/static/?sid=pVxn7ZLvhxkzVZST0eNlwtlGO8E5Upd4&amp;width=600&amp;height=450&amp;lang=ru_RU&amp;sourceType=constructor" alt="" style="border: 0;")
+    // подключаю подвал
+block footer
+    include ../parts/footer

@@ -1,0 +1,51 @@
+-
+    var socialIcons = [
+        {name:'vk', href:'#'},
+        {name:'github', href:'#'}
+    ]
+-
+    var navigations = [
+        {name:'Мои работы', href:'portfolio.html', nameLink:'work'},
+        {name:'Обо мне', href:'about.html', nameLink:'about-me'},
+        {name:'Блог', href:'blog.html', nameLink:'blog'}
+    ]
+
+header.welcome
+    a(href= '#' class='authorize') Авторизоваться
+    .flip-container
+        .flipper
+            .developer
+                img.developer__avatar(src='assets/img/avatar/iam.jpeg', alt='Станислав Мухин')
+                h1.developer__name Станислав Мухин
+                p.developer__info Личный сайт веб разработчика
+                ul.social__list
+                    each icon in socialIcons
+                        li.social__list__item
+                            a(href=icon.href class='social__list__link')
+                                i(class='fa fa-' + icon.name aria-hidden='true')
+                ul.page-nav
+                    each navigation in navigations
+                        li.page-nav__item
+                            a(href=navigation.href class='page-nav__link page-nav__link_' + navigation.nameLink)= navigation.name
+            .authorize-form
+                .authorize-form__title Авторизуйтесь
+                form.authorize-form__conteiner(action="" id="form-validation" )
+                    p.input-login
+                        input.authorize-form__style.authorize-form__style_login(type="text" name="form_name" placeholder="Логин" )
+                        i.fa.fa-user.input-login__font-image(aria-hidden='true')
+                    p.input-login
+                        input.authorize-form__style.authorize-form__style_password(type="password" name="form_password" placeholder="Пароль" )
+                        i.fa.fa-key.input-login__font-image(aria-hidden='true')
+                    .checkbox
+                        input.checkbox__input(type="checkbox" name="form_checkbox" id="person")
+                        label.checkbox__label(for="person") Я человек
+                    p.question Вы точно не робот?
+                    .radio
+                        input.radio__input(type="radio" name="form_radio" id="yes")
+                        label.radio__label(for="yes") Да
+
+                        input.radio__input(type="radio" name="form_radio" id="no")
+                        label.radio__label(for="no") Не уверен
+                    .authorize-btn.clearfix
+                        input.authorize-btn__item.authorize-btn__item_home(type="reset" name="reset" value="На главную")
+                        input.authorize-btn__item.authorize-btn__item_submit(type="submit" name="submit" value="Войти")

@@ -1,0 +1,205 @@
+.slider {
+  float: left;
+  position: relative;
+  width: 100%;
+  height: 750px;
+  background: #f0efe9;
+  &__portfolio {
+    float: left;
+    position: relative;
+    width: 50%;
+    height: 100%;
+    overflow: hidden;
+    &__img {
+      padding: 93px 9% 0 0;
+      text-align: right;
+    }
+  }
+  &__detail {
+    float: right;
+    position: relative;
+    width: 50%;
+    height: 100%;
+    overflow: hidden;
+    &__wrapper {
+      width: 422px;
+      margin: 252px 0 0 20%;
+    }
+    &__title {
+      color: #373e42;
+      font-size: 35px;
+      font-family: BERNIERRegular-Regular;
+      margin-bottom: 40px;
+    }
+    &__technologies {
+      font-size: 16px;
+      @include roboto(medium);
+      color: #48cdb9;
+      padding: 20px 0;
+      border-top: 1px solid #48cdb9;
+      border-bottom: 1px solid #48cdb9;
+      margin-bottom: 40px;
+    }
+  }
+  &__arrow {
+    font-size: 26px;
+    color: #48cdb9;
+    position: absolute;
+    top: 50%;
+    margin-top: -373.5px;
+    padding: 365px 0 365px 0;
+    &_right {
+      right: 0;
+      padding-right: 30px;
+      padding-left: 100px;
+    }
+    &_left {
+      padding-left: 30px;
+      padding-right: 100px;
+    }
+  }
+  &__list {
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    margin-left: -68px;
+    font-size: 0;
+    &__btn {
+      display: inline-block;
+      margin-right: 21px;
+    }
+    &__link {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      border: 2px solid #48cdb9;
+      background: #fff;
+      padding: 0 4px 0 3px;
+      font-size: 8px;
+      color: #fff;
+    }
+  }
+}
+
+//
+//.btn-view__link {
+//  text-decoration: none;
+//  color: #fff;
+//  font-size: 16px;
+//  @include roboto(medium);
+//  padding: 16px 20px 16px 18px;
+//  background: #48cdb9;
+//  border-radius: 4px;
+//  &:hover {
+//    background: rgba(#268b8b, 0.8);
+//  }
+//}
+//
+//.fa-link {
+//  font-size: 20px;
+//  padding-right: 10px;
+//}
+//
+//.bounceInUp {
+//  animation-name: bounceInUp;
+//  animation-duration: 1s;
+//  animation-fill-mode: both;
+//}
+//
+//@keyframes bounceInUp {
+//  from, 60%, 75%, 90%, to {
+//    animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+//  }
+//
+//  from {
+//    opacity: 0;
+//    transform: translate3d(0, 3000px, 0);
+//  }
+//
+//  60% {
+//    opacity: 1;
+//    transform: translate3d(0, -20px, 0);
+//  }
+//
+//  75% {
+//    transform: translate3d(0, 10px, 0);
+//  }
+//
+//  90% {
+//    transform: translate3d(0, -5px, 0);
+//  }
+//
+//  to {
+//    transform: translate3d(0, 0, 0);
+//  }
+//}
+//
+//.bounceInDown {
+//  animation-name: bounceInDown;
+//  animation-duration: 1s;
+//  animation-fill-mode: both;
+//}
+//
+//@keyframes bounceInDown {
+//  from, 60%, 75%, 90%, to {
+//    animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+//  }
+//
+//  0% {
+//    opacity: 0;
+//    transform: translate3d(0, -3000px, 0);
+//  }
+//
+//  60% {
+//    opacity: 1;
+//    transform: translate3d(0, 25px, 0);
+//  }
+//
+//  75% {
+//    transform: translate3d(0, -10px, 0);
+//  }
+//
+//  90% {
+//    transform: translate3d(0, 5px, 0);
+//  }
+//
+//  to {
+//    transform: none;
+//  }
+//}
+//
+//.rubberBand {
+//  animation-name: rubberBand;
+//  animation-duration: 1s;
+//  animation-fill-mode: both;
+//}
+//
+//@keyframes rubberBand {
+//  from {
+//    transform: scale3d(1, 1, 1);
+//  }
+//
+//  30% {
+//    transform: scale3d(1.25, 0.75, 1);
+//  }
+//
+//  40% {
+//    transform: scale3d(0.75, 1.25, 1);
+//  }
+//
+//  50% {
+//    transform: scale3d(1.15, 0.85, 1);
+//  }
+//
+//  65% {
+//    transform: scale3d(.95, 1.05, 1);
+//  }
+//
+//  75% {
+//    transform: scale3d(1.05, .95, 1);
+//  }
+//
+//  to {
+//    transform: scale3d(1, 1, 1);
+//  }
+//}
