@@ -27,6 +27,14 @@
       margin-left: -176px;
     }
   }
+
+  &__bg{
+    position: absolute;
+    left: 84px;
+    top: -50px;
+    opacity: 0.04;
+  }
+
   &__detail {
     float: left;
     width: 50%;

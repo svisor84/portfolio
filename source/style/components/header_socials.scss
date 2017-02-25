@@ -2,6 +2,8 @@
   float: left;
   padding: 28px 0 0 30px;
   font-size: 0;
+  position:absolute;
+  left: 0px;
   &__item {
     display: inline-block;
     vertical-align: top;
@@ -16,6 +18,7 @@
     }
   }
   &__icon {
-    width:48px;
+    width:40px;
+    height:40px
   }
 }

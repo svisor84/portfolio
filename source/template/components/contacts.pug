@@ -6,7 +6,7 @@
         },
         {
             title:'stnslvmukhin@gmail.com',
-            name: 'email'
+            name: 'envelope2'
         },
         {
             title:'+7(926)262-8741',
@@ -14,18 +14,20 @@
         },
         {
             title:'Одинцово',
-            name: 'city'
+            name: 'map_marker'
         }
     ];
 
 .page-contact
+    .google-map
+        script(async defer src='https://maps.googleapis.com/maps/api/js?key=AIzaSyBRTCjsDL12rMVmvbFEeI7U_ExPg7u0Fmo&callback=initMap')
     .contact-list
         p.contact-list__title КОНТАКТЫ
         ul.contact-list__detail
             each contact in contacts
                 li.contact-list__detail-item
-                    a(href=contact.title class='contact-list__detail-item-img contact-list__detail__item_skype')
-                        svg.footer-social_social-icon
+                    a(href=contact.title class='contact-list__detail-item-img')=contact.title
+                        svg.social__icon.social-contants
                             use(xlink:href=`assets/img/sprite.svg#`+contact.name)
 
 

@@ -18,11 +18,12 @@ header.welcome
                 img.developer__avatar(src='assets/img/avatar/iam.jpeg', alt='Станислав Мухин')
                 h1.developer__name Станислав Мухин
                 p.developer__info Личный сайт веб разработчика
-                ul.social__list
+                ul.social-list
                     each icon in socialIcons
-                        li.social__list__item
-                            a(href=icon.href class='social__list__link')
-                                i(class='fa fa-' + icon.name aria-hidden='true')
+                        li.social-list__item
+                            a(href=icon.href class='social-list__link')
+                                svg.social__icon
+                                    use(xlink:href=`assets/img/sprite.svg#`+icon.name)
                 ul.page-nav
                     each navigation in navigations
                         li.page-nav__item

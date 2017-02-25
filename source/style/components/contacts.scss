@@ -3,10 +3,13 @@
   min-height: 1074px;
   position: relative;
   margin-bottom: -140.5px;
-  //background: url('../../assets/img/content/map.png') no-repeat center; //TODO
+  //background: url() no-repeat center; //TODO
   background-size: cover;
 }
-
+.social-contants{
+  float:left;
+  margin-right: 20px;
+}
 .contact-list {
   position: absolute;
   top: 50%;
@@ -15,7 +18,7 @@
   margin-left: -190px;
   background: rgba(252, 252, 252, 0.9);
   border-radius: 4px;
-  width: 380px;
+  width: 410px;
   min-height: 290px;
   padding-bottom: 13px;
   &__title {

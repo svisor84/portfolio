@@ -53,6 +53,14 @@
       transition-duration: 0.3s;
     }
   }
+  &__bg{
+    width: 1200px;
+    position: absolute;
+    opacity: 0.04;
+    left: -436px;
+    height: 323px;
+    top: -77px;
+  }
 }
 
 .triangle {
