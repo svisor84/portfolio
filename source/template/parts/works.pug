@@ -1,3 +1,34 @@
-.my-work__title МОИ РАБОТЫ
-    span.my-work__title__img-wrapper
-        img(src='#' alt='text_work')
+.my-work
+    .my-work__title МОИ РАБОТЫ
+        span.my-work__title-img
+            svg.works__bg
+                use(xlink:href=`assets/img/sprite.svg#works_header`)
+    .my-work-blocks.clearfix
+        .my-work-blocks__left.clearfix
+            .school
+                p.school__title.school__title_hyphen САЙТ ШКОЛЫ ОНЛАЙН
+                p.school__title ОБРАЗОВАНИЯ
+                .school__description
+                    hr.line
+                    p.school__text HTML CSS JAVASCRIPT
+                    hr.line
+                .school__botton
+                    a(href=`//loftschool.com/` target=`_blank`).school__link Посмотреть сайт
+                        svg.school__botton-img
+                            use(xlink:href=`assets/img/sprite.svg#link`)
+        .my-work-blocks__right.clearfix
+            .slider
+                .slider__view
+                    img(src=`../../assets/img/works/work-1.png`).slider__view_pic
+                .slider__arrow
+                    a(href=`#`).slider__arrow_left
+                        .slider__arrow-wrapper-left
+                            .slider__shadow
+                                svg.arrow-chevron
+                                    use(xlink:href=`assets/img/sprite.svg#portf_arrow_down`)
+                    a(href=`#`).slider__arrow_right
+                        .slider__arrow-wrapper-right
+                            .slider__shadow
+                                svg.arrow-chevron
+                                    use(xlink:href=`assets/img/sprite.svg#portf_arrow_up`)
+
