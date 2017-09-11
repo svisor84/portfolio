@@ -1,10 +1,15 @@
-.my-work
-    .my-work__title МОИ РАБОТЫ
-        span.my-work__title-img
+section.section.my-works
+    .triangle-section
+        svg.triangle.triangle-left(xmlns='http://www.w3.org/2000/svg', viewbox='0 0 1000 110', preserveaspectratio='none')
+            polygon(points='0,0   0,110   500,110').triangle-left
+        svg.triangle.triangle-right(xmlns='http://www.w3.org/2000/svg', viewbox='0 0 1000 110', preserveaspectratio='none')
+            polygon(points='500,110   1000,110   1000,0').triangle-right
+    .my-works__title МОИ РАБОТЫ
+        span.my-works__title-img
             svg.works__bg
                 use(xlink:href=`assets/img/sprite.svg#works_header`)
-    .my-work-blocks.clearfix
-        .my-work-blocks__left.clearfix
+    .my-works-blocks.clearfix
+        .my-works-blocks__left.clearfix
             .school
                 p.school__title.school__title_hyphen САЙТ ШКОЛЫ ОНЛАЙН
                 p.school__title ОБРАЗОВАНИЯ
@@ -16,10 +21,10 @@
                     a(href=`//loftschool.com/` target=`_blank`).school__link Посмотреть сайт
                         svg.school__botton-img
                             use(xlink:href=`assets/img/sprite.svg#link`)
-        .my-work-blocks__right.clearfix
+        .my-works-blocks__right.clearfix
             .slider
                 .slider__view
-                    img(src=`../../assets/img/works/work-1.png`).slider__view_pic
+                    img(src=`../../assets/img/workss/works-1.png`).slider__view_pic
                 .slider__arrow
                     a(href=`#`).slider__arrow_left
                         .slider__arrow-wrapper-left

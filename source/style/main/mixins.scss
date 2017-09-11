@@ -32,3 +32,56 @@
   background-position: center center;
   background-repeat: no-repeat;
 }
+
+@mixin centered($axis:'both'){
+  position:absolute;
+
+  @if($axis == 'both'){
+  top: 50%;
+  left: 50%;
+  transform:translate(-50%, -50%)
+  }
+
+  @if($axis == 'x'){
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  @if($axis == 'y'){
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}
+
+@mixin title($f-size,$padding, $dash:'dash'){
+  font-size: $f-size;
+  color: #373e42;
+  text-align: center;
+  padding: $padding;
+  display: inline-block;
+  background-size: contain;
+  background-position: center center;
+  background-repeat: no-repeat;
+  font-family: BERNIERRegular-Regular;
+  position: relative;
+
+  @if($dash == 'dash'){
+    &:before, &:after {
+      content: "";
+      display: block;
+      width: 22px;
+      height: 5px;
+      @include centered(y);
+      background: #c9c9c6;
+    }
+
+    $dash-margin: 40px;
+
+    &:before{
+      left: $dash-margin;
+    }
+    &:after{
+      right: $dash-margin;
+    }
+  }
+}

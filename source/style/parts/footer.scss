@@ -1,6 +1,6 @@
 .page-footer {
   width: 100%;
-  background: rgba(#555b5e, 0.9);
+  background: $light_grey;
   position: relative;
   overflow: hidden;
   height: 141px;
@@ -34,27 +34,33 @@
     height: 36px;
     margin-left: 10px;
     border-radius: 50%;
-    border: 1px solid rgba(252, 252, 252, 0.9);
+    border: 1px solid $faf8f0;
     text-align: center;
     padding: 4px 0px 0 0;
+    background: $white;
     &:hover {
-      transition-duration: 0.6s;
-      border: 1px solid $white;
-      background: $white;
+      transition-duration: 0.2s;
+      background: none;
     }
   }
   &__link {
     font-size: 23px;
-    padding: 5.5px;
-    color: rgba(252, 252, 252, 0.7);
+    color: $faf8f0;
     &:hover {
-      color: rgba(#555b5e, 0.9);
+      color: $light_grey;
       transition-duration: 0.5s;
     }
   }
   &_social-icon{
-    width:40px;
-    height:40px
+    width: 34px;
+    height: 34px;
+    position: relative;
+    left: 0px;
+    top: -4px;
+    fill: $light_grey;
+    &:hover{
+      fill:$white;
+    }
   }
 
 }

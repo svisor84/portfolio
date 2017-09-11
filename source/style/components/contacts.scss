@@ -6,10 +6,18 @@
   //background: url() no-repeat center; //TODO
   background-size: cover;
 }
+.google-map {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+}
 .social-contants{
   float:left;
   margin-right: 20px;
 }
+
 .contact-list {
   position: absolute;
   top: 50%;
@@ -21,34 +29,26 @@
   width: 410px;
   min-height: 290px;
   padding-bottom: 13px;
+  text-align: center;
   &__title {
-    padding: 36px 0 38px 0;
-    font-family: BERNIERRegular-Regular;
-    font-size: 35px;
-    line-height: 27px;
-    color: #373e42;
-    text-align: center;
-    &:before,
-    &:after {
-      content: ' - ';
-      color: #000;
-      opacity: 0.3;
-      font-size: 35px;
-    }
+    @include title(35px,35px 80px);
+    margin-bottom: -8px;
   }
   &__detail {
     font-size: 0;
     padding: 0 0 0 40px;
+    text-align: left;
     &-item {
-      font-size: 16px;
       font-family: 'Roboto', sans-serif;
       font-weight: 500;
-      color: #455a64;
       margin-bottom: 26px;
-      &-img {
-        font-size: 25px;
-        color: #00bea4;
-        margin-right: 10px;
+      font-size: 22px;
+      color: #455a64;
+      margin-right: 10px;
+      &:hover{
+        .social__icon{
+          opacity: 1 !important;
+        }
       }
     }
   }

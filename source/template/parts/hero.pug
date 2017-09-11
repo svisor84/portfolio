@@ -1,0 +1,19 @@
+.wrapper
+    section.section.hero
+        .hero__bg
+            img(src="/assets/img/bground/welcome_mountains_1800.png" alt='').hero__bg-img
+
+        ul.social
+            include ../components/header_socials
+
+        .hero__container
+            svg.hero__title-pic
+                use(xlink:href=`assets/img/sprite.svg#portfolio_header`)
+
+            .user
+                .user__pic-container
+                    img(src="assets/img/avatar/iam.jpeg" alt="Станислав Мухин").user__pic
+                h1.user__name Станислав Мухин
+                p.user__desc Личный сайт разработчика
+
+

@@ -3,7 +3,7 @@
   overflow: hidden;
   width: 100%;
   min-height: 1130px;
-  //background: url('../../assets/img/bg/portfolio_mountains-sea_1800.png') no-repeat center;
+  background: url('../../assets/img/bground/portfolio_mountains-sea_1800.png') no-repeat center;
   background-size: cover;
 }
 
@@ -24,14 +24,20 @@
       font-size: 35px;
     }
   }
-  &__img-wrapper {
+  &-img {
     position: absolute;
     left: 50%;
-    top: 23px;
-    margin-left: -249.5px;
+    top: 0;
+    margin-left: -253px;
   }
 }
-
+.feedback-about__bg{
+  opacity: 0.1;
+  position: absolute;
+  left: -115px;
+  width: 751px;
+  top:30px;
+}
 // ОТЗЫВЫ
 .reviews {
   margin: 70px auto;
@@ -109,7 +115,7 @@
   &__blur {
     position: absolute;
     bottom: -46px;
-    background: url('../../assets/img/bg/portfolio_mountains-sea_1800.png') no-repeat center;
+    background: url('../../assets/img/bground/portfolio_mountains-sea_1800.png') no-repeat center;
     background-size: 1903px;
     background-position: center;
     height: 910px;
@@ -183,4 +189,7 @@
     color: #fff;
     transition-duration: 0.5s;
   }
+}
+.fa-chevron-up{
+  background-image: url('../../assets/img/sprite.svg#arrow_down');
 }

@@ -1,22 +1,30 @@
-main.page-main.clearfix
-    .about-me
-        .about-me__title ОБО МНЕ
-            span.about-me__title-img
-                svg.about-me__bg
-                    use(xlink:href=`assets/img/sprite.svg#about_header`)
-        .about-me__detail
-            .about-me__detail-img
-                img.about-me__detail-avatar(src='assets/img/avatar/iam.jpeg' alt='Станислав Мухин')
-            p.about-me__detail-title КТО Я
-            p.about-me__detail-text.
-                Я веб разработчик из Одинцово. Мне 32 года. Я занимаюсь разработкой современных сайтов и приложений. Мне нравится делать интересные и современные проекты.
+section.section.about
+    .about__col.about__col_left
+        svg.triangle(xmlns='http://www.w3.org/2000/svg', viewbox='0 0 1000 110', preserveaspectratio='none')
+            polygon(points='0,0   0,110   1000, 110').triangle
 
-            p.about-me__detail-text.
-                Этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool. Чуть позже я освежу в нём свой контент. А пока посмотрите, как тут всё классно и красиво!
 
-    .skills
-        p.skills__title.skills__title_hyphen ЧЕМ Я МОГУ БЫТЬ
-        p.skills__title ВАМ ПОЛЕЗЕН
-        P.skills__description.
-            Больше всего меня привлекет Frontend разработка, но я также знаком и могу решать не сложные задачина Backend. Но давайте по порядку.
-        include ../components/skills
+        .section-title
+            | ОБО МНЕ
+            svg.section-title__bg
+                use(xlink:href=`assets/img/sprite.svg#about_header`)
+        .about
+            .about-pic
+                img(src='assets/img/avatar/iam.jpeg' alt='Станислав Мухин')
+            .section-title__small КТО Я
+            .block-text
+                | Я веб разработчик из Одинцово. Мне 32 года. Я занимаюсь разработкой современных сайтов и приложений. Мне нравится делать интересные и современные проекты.
+
+            .block-text
+                | Этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool. Чуть позже я освежу в нём свой контент. А пока посмотрите, как тут всё классно и красиво!
+
+    .about__col.about__col_right
+        svg.triangle(xmlns='http://www.w3.org/2000/svg', viewbox='0 0 1000 110', preserveaspectratio='none')
+            polygon(points='0,110   1000,110   1000,0').triangle
+        .skills
+            .skills-title
+                .section-title__small ЧЕМ Я МОГУ БЫТЬ
+                .section-title__under ВАМ ПОЛЕЗЕН
+            P.skills__description.
+                Больше всего меня привлекет Frontend разработка, но я также знаком и могу решать не сложные задачина Backend. Но давайте по порядку.
+            include ../components/skills

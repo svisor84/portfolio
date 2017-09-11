@@ -19,15 +19,14 @@
     ];
 
 .page-contact
-    .google-map
-        script(async defer src='https://maps.googleapis.com/maps/api/js?key=AIzaSyBRTCjsDL12rMVmvbFEeI7U_ExPg7u0Fmo&callback=initMap')
+    .google-map#map
     .contact-list
         p.contact-list__title КОНТАКТЫ
         ul.contact-list__detail
             each contact in contacts
                 li.contact-list__detail-item
-                    a(href=contact.title class='contact-list__detail-item-img')=contact.title
-                        svg.social__icon.social-contants
+                    a(href=contact.title class='contact-list__detail-item')=contact.title
+                        svg.social__icon.social__icon-contacts.social-contants
                             use(xlink:href=`assets/img/sprite.svg#`+contact.name)
 
 

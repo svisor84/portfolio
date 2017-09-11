@@ -22,7 +22,7 @@ header.welcome
                     each icon in socialIcons
                         li.social-list__item
                             a(href=icon.href class='social-list__link')
-                                svg.social__icon
+                                svg.social__icon-front
                                     use(xlink:href=`assets/img/sprite.svg#`+icon.name)
                 ul.page-nav
                     each navigation in navigations
@@ -50,3 +50,5 @@ header.welcome
                     .authorize-btn.clearfix
                         input.authorize-btn__item.authorize-btn__item_home(type="reset" name="reset" value="На главную")
                         input.authorize-btn__item.authorize-btn__item_submit(type="submit" name="submit" value="Войти")
+    p.copyright-authorize.
+        © Станислав Мухин | создано с любовью в LoftSchool | 2017

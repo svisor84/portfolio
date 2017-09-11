@@ -7,17 +7,22 @@ $dark_grey: #373e42;
 $red: #e44845;
 $grey: #53595d;
 $white: #fff;
+$faf8f0: #faf8f0;
+$f0efe9: #f0efe9;
+$triangle_right: #eeebdf;
+$triangle_left: #efeee9;
 
 // setups
-@import 'main/common.scss';
 @import 'main/fonts.scss';
-@import 'main/layout.scss';
 @import 'main/mixins.scss';
+@import 'main/common.scss';
+@import 'main/layout.scss';
 
 // partials
 @import 'parts/feedback.scss';
 @import 'parts/footer.scss';
-@import 'parts/header_about.scss';
+@import 'parts/hero.scss';
+@import 'parts/user.scss';
 @import 'parts/main_about.scss';
 @import 'parts/works.scss';
 

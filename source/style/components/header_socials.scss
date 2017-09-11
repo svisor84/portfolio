@@ -4,6 +4,7 @@
   font-size: 0;
   position:absolute;
   left: 0px;
+  z-index:99999;
   &__item {
     display: inline-block;
     vertical-align: top;
@@ -12,13 +13,27 @@
     margin-right: 31px;
     font-size: 26px;
     color: rgba(252, 252, 252, 0.6);
-    &:hover {
-      color: #fff;
-      transition-duration: 0.3s;
-    }
   }
   &__icon {
     width:40px;
-    height:40px
+    height:40px;
+    fill:#fff;
+    opacity: 0.7;
+    transition-duration: .3s;
+    &:hover{
+      opacity:1;
+      transition-duration: .3s;
+    }
+    &-contacts{
+      fill:#00bea4;
+    }
+  }
+  &__icon-front {
+    width:40px;
+    height:40px;
+    fill:$light_green;
+    &:hover{
+      fill:$dark_green;
+    }
   }
 }
