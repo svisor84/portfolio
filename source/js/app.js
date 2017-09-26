@@ -84,5 +84,22 @@ function init() {
         title: 'Snazzy!'
     });
 }
+// вызов меню
+var toggle = document.querySelector('#toggle');
+var overlay = document.querySelector('#overlay');
+toggle.addEventListener('click', function(){
+    var cross = toggle.getAttribute('class');
+    if(cross !== "hamburger cross active"){
+        toggle.setAttribute('class','hamburger cross active');
+        overlay.setAttribute('class', 'overlay open');
+        toggle.style.position = 'fixed';
+    }
+    else{
+        toggle.setAttribute('class','hamburger');
+        overlay.setAttribute('class','overlay');
+        toggle.style.position = 'absolute';
+    }
+
+},false);
 
 
