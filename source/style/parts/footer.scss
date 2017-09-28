@@ -21,6 +21,9 @@
     line-height: 13px;
     color: $white;
     text-decoration: none;
+    &:hover{
+      color: $dark_green;
+    }
   }
 }
 

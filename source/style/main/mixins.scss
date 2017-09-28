@@ -55,7 +55,7 @@
 
 @mixin title($f-size,$padding, $dash:'dash'){
   font-size: $f-size;
-  color: #373e42;
+  color: $light_grey;
   text-align: center;
   padding: $padding;
   display: inline-block;
@@ -83,5 +83,11 @@
     &:after{
       right: $dash-margin;
     }
+  }
+}
+
+@mixin tablets(){
+  @media screen and (max-width: 768px){
+    @content;
   }
 }

@@ -1,4 +1,4 @@
-.page-form {
+.reviews {
   position: relative;
   overflow: hidden;
   width: 100%;
@@ -6,106 +6,100 @@
   background: url('../../assets/img/bground/portfolio_mountains-sea_1800.png') no-repeat center;
   background-size: cover;
 }
-
-.say-about-me__title {
-  text-align: center;
+.say-about-me{
   width: 100%;
-  font-size: 63px;
-  font-family: BERNIERRegular-Regular;
-  line-height: 35px;
-  color: #455a64;
-  &_hyphen {
-    margin: 68px 0 20px 0;
-    &:before,
-    &:after {
-      content: ' - ';
-      color: #000;
-      opacity: 0.3;
-      font-size: 35px;
+  text-align: center;
+  height: 250px;
+
+  &__title-block{
+    margin-top:45px;
+    width: 25%;
+    display: inline-block;
+    min-width: 460px;
+    height: 180px;
+  }
+  &__title{
+    @include title(63px,0 80px);
+  }
+  &__under-title {
+    @include title(63px,0px 80px,no-dash);
+
+    &-img {
+      position: absolute;
+      left: 50%;
+      top: 0;
+      margin-left: -253px;
     }
   }
-  &-img {
-    position: absolute;
-    left: 50%;
-    top: 0;
-    margin-left: -253px;
+  &__bg{
+    opacity: 0.1;
+    position: relative;
+    left: -30%;
+    width: 751px;
+    top: -180px;
+    height: 215px;
   }
 }
-.feedback-about__bg{
-  opacity: 0.1;
-  position: absolute;
-  left: -115px;
-  width: 751px;
-  top:30px;
-}
+
 // ОТЗЫВЫ
-.reviews {
+.reviews-row {
   margin: 70px auto;
   max-width: 750px;
-  &__left-wrapper {
+  width: 100%;
+  height: 250px;
+  &__left-col {
     float: left;
-    width: 50%;
+    width: 48%;
+    margin-right: 30px;
+  }
+  &__right-col {
+    float: left;
+    width: 48%;
   }
   &__quotes {
-    color: #dde0e0;
+    color: $white;
     font-size: 33px;
-    margin-bottom: 30px;
+    margin-bottom: 10px;
   }
-  &__quote__text {
+  &__text {
     @include roboto(regular);
     font-size: 16px;
-    color: #455a64;
+    color: $light_grey;
     margin-bottom: 28px;
   }
-  &__human__photo {
+  &__human-photo {
     float: left;
     width: 80px;
     height: 80px;
     border-radius: 50%;
     overflow: hidden;
   }
-  &__human__detail {
+  &__human-detail {
     float: left;
     margin: 20px 0 0 20px;
-    width: 270px;
-    color: #20b5a1;
+    width: 250px;
+    color: $light_green;
     font-size: 16px;
     @include roboto(regular);
   }
-  &__human__name {
+  &__human-detail_name {
     font-weight: 700;
   }
-  &__human__about {
+  &__human-detail_about {
     font-weight: 300;
 
   }
   // СТИЛИ ДЛЯ ФОРМЫ
 }
 
-.feedback {
+.feedback-row {
   position: relative;
   overflow: hidden;
-  width: 380px;
+  width: 416px;
+  text-align: center;
   min-height: 438px;
   margin: 0 auto;
   border-radius: 4px;
-  &__title {
-    margin: 38px 0;
-    text-align: center;
-    width: 100%;
-    font-size: 35px;
-    font-family: BERNIERRegular-Regular;
-    line-height: 27px;
-    color: #455a64;
-    &:before,
-    &:after {
-      content: ' - ';
-      color: #000;
-      opacity: 0.3;
-      font-size: 35px;
-    }
-
-  }
   &__wrapp-blur {
     position: absolute;
     top: -469px;
@@ -114,7 +108,7 @@
   }
   &__blur {
     position: absolute;
-    bottom: -46px;
+    bottom: -5px;
     background: url('../../assets/img/bground/portfolio_mountains-sea_1800.png') no-repeat center;
     background-size: 1903px;
     background-position: center;
@@ -128,47 +122,51 @@
   }
 }
 
-.form__style {
-  width: 300px;
-  margin: 0 20px 20px 20px;
-  font-size: 16px;
-  @include roboto(light);
-  color: #373e42;
-  border-radius: 5px;
-  background: #fff;
-  border: none;
-  padding: 13px 20px;
-  &_message {
-    resize: none;
+
+.form{
+  &__title{
+    @include title(35px,30px 80px);
   }
-
+  &__style {
+    width: 300px;
+    margin: 0 20px 20px 20px;
+    font-size: 16px;
+    @include roboto(light);
+    color: $dark_grey;
+    border-radius: 5px;
+    background: $white;
+    border: none;
+    padding: 13px 20px;
+    &_message {
+      resize: none;
+    }
+  }
 }
-
-.form__btn {
+.form-btn {
   &__item {
     float: left;
-    width: 190px;
+    width: 50%;
     border: none;
     font-size: 16px;
     @include roboto(medium);
-    background: #26bbaa;
-    color: rgba(#fff, 0.8);
+    background: $light_green;
+    color: rgba($white, 0.8);
     padding: 13px 0;
     text-align: center;
     outline: none;
     &:hover {
-      background: #268b8b;
-      color: #fff;
+      background: $dark_green;
+      color: $white;
       cursor: pointer;
     }
     &:active {
       outline: 0;
     }
     &_submit {
-      border-right: 1px solid #82cfc9;
+      border-right: 1px solid $light_green;
     }
     &_clear {
-      border-left: 1px solid #82cfc9;
+      border-left: 1px solid $white;
       &:focus {
         outline: 0;
       }
@@ -178,18 +176,21 @@
 }
 
 //- КОНЕЦ ФОРМЫ
-.page-up {
-  display: block;
-  height: 26px;
+.page-up{
   width: 26px;
+  height: 26px;
   margin: 70px 0 70px 49.3%;
-  font-size: 26px;
-  color: rgba(252, 252, 252, 0.6);
-  &:hover {
-    color: #fff;
-    transition-duration: 0.5s;
+  &__link{
+
+  }
+  &__chevron-up_bg {
+    height: 26px;
+    width: 26px;
+    fill: $white;
+    &:hover {
+      fill: $dark_green;
+      transition-duration: 0.5s;
+    }
   }
 }
-.fa-chevron-up{
-  background-image: url('../../assets/img/sprite.svg#arrow_down');
-}
+

@@ -17,7 +17,7 @@
   &__icon {
     width:40px;
     height:40px;
-    fill:#fff;
+    fill:$white;
     opacity: 0.7;
     transition-duration: .3s;
     &:hover{
@@ -25,7 +25,7 @@
       transition-duration: .3s;
     }
     &-contacts{
-      fill:#00bea4;
+      fill:$light_green;
     }
   }
   &__icon-front {

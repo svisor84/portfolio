@@ -8,57 +8,6 @@
     fill:$white;
   }
 }
-.slider {
-  width: 100%;
-  height: 100%;
-  &__view{
-    width:100%;
-    height: 70%;
-    padding: 36px 300px;
-    &_pic{
-      height: 450px;
-    }
-  }
-  &__arrow{
-    width: 100%;
-    height: 30%;
-    &_left{
-      float:left;
-      width: 50%;
-      height: 100%;
-      background: #f0efe9;
-    }
-    &_right{
-      float: right;;
-      width: 50%;
-      height: 100%;
-      background: #faf8f0;
-    }
-    &-wrapper-left{
-      height: 100%;
-      background: url("../../assets/img/works/work-2.png");
-    }
-    &-wrapper-right{
-      height: 100%;
-      background: url("../../assets/img/works/work-3.png");
-    }
-  }
-  &__shadow{
-    height: 100%;
-    background: black;
-    opacity: 0.2;
-    &:hover{
-      opacity: 0.4;
-    }
-  }
-}
-.arrow-chevron{
-  fill: #f0efe9;
-  width: 50px;
-  position: relative;
-  left: 233px;
-  top: 37px;
-}
 .my-works-blocks{
   float: left;
   position: relative;
@@ -78,25 +27,26 @@
     float: left;
   }
 }
-.my-works {
+.portfolio{
   position: relative;
   width: 100%;
   height: 750px;
-  &__title {
-    float: left;
-    position: relative;
+}
+.my-works {
+  &__head{
     width: 100%;
-    padding: 53px 0;
     text-align: center;
-    color: #373e42;
-    font-size: 63px;
-    font-family: BERNIERRegular-Regular;
-    &:before,
-    &:after {
-      content: '-';
-      color: #000;
-      opacity: 0.3;
-    }
+    height: 190px;
+  }
+  &__title-block{
+    margin-top:60px;
+    width: 25%;
+    display: inline-block;
+    min-width: 460px;
+    height: 105px;
+  }
+  &__title{
+    @include title(63px,0 80px);
     &-img {
       position: absolute;
       left: 50%;
@@ -104,13 +54,17 @@
       margin-left: -253px;
     }
   }
+  &__bg{
+    opacity: 0.1;
+    position: absolute;
+    left: -135px;
+    width: 751px;
+    top:-60px;
+    height: 180px;
+  }
+
 }
-.works__bg{
-  opacity: 0.1;
-  position: absolute;
-  left: -115px;
-  width: 751px;
-}
+
 .school {
   display: table-cell;
   vertical-align: middle;
@@ -132,7 +86,7 @@
   &__title {
     font-family: BERNIERRegular-Regular;
     font-size: 35px;
-    color: #455a64;
+    color: $light_grey;
     text-align: center;
     line-height: 25px;
   }
@@ -140,16 +94,16 @@
     font-family: 'Roboto', sans-serif;
     font-weight: 400;
     font-size: 16px;
-    color: #455a64;
+    color: $light_grey;
     text-align: center;
     margin: 35px 0;
   }
   &__text{
-    color: #00bfa5;
+    color: $light_green;
     font-size: 20px;
   }
   &__botton{
-    background: #00bfa5;
+    background: $light_green;
     width: 200px;
     height: 50px;
     display: table;
@@ -161,7 +115,7 @@
   &__link{
     text-decoration: none;
     @include roboto(medium);
-    color: #efeee9;
+    color: $triangle_left;
     font-size: 16px;
     display: table-cell;
     vertical-align: middle;
@@ -175,14 +129,14 @@
     width: 20px;
     height: 20px;
     float: left;
-    fill:#efeee9;
+    fill:$triangle_left;
     margin-left: 1rem;
   }
 }
 .school hr{
   border: none;
-  background-color: #00bfa5;
-  color: #00bfa5;
+  background-color: $light_green;
+  color: $light_green;
   height: 2px;
   width: 350px;
   opacity: .3;
