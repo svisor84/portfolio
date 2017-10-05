@@ -1,38 +1,23 @@
+.triangle-section{
+  width: 100%;
+  height: 110px;
+  margin-top: -110px;
+}
 .triangle{
   &-left{
     left: 0;
     fill:$white;
+    bottom: auto;
   }
   &-right{
     right: 0;
     fill:$white;
+    bottom: auto;
   }
 }
-.my-works-blocks{
-  float: left;
-  position: relative;
-  width: 100%;
-  height: 750px;
-  background: #f0efe9;
-  &__left{
-    width: 50%;
-    height: 750px;
-    float: left;
-    display: table;
-  }
-  &__right{
-    background: #eeebdf;
-    width: 50%;
-    height: 750px;
-    float: left;
-  }
-}
-.portfolio{
-  position: relative;
-  width: 100%;
-  height: 750px;
-}
-.my-works {
+
+.works-head {
+  text-align: center;
   &__head{
     width: 100%;
     text-align: center;
@@ -57,87 +42,454 @@
   &__bg{
     opacity: 0.1;
     position: absolute;
-    left: -135px;
-    width: 751px;
-    top:-60px;
+    left: 10px;
+    width: 100%;
+    top:-20px;
     height: 180px;
   }
-
 }
 
-.school {
-  display: table-cell;
-  vertical-align: middle;
-  &:before{
-    display: inline-block;
-    height: 100%;
-    vertical-align: middle;
-  }
-  &__title_hyphen {
-    margin-bottom: 16px;
-    &:before,
+.works {
+  position: relative;
+
+  &__content{
+    &:before, &:after {
+      content: "";
+      display: table
+    }
     &:after {
-      content: ' - ';
-      color: #000;
-      opacity: 0.3;
-      font-size: 35px;
+      clear: both
+    }
+
+    &-desc{
+      padding: 1.25rem 0;
+      border: 1px solid transparent;
+      border-top-color: #acd6ce;
+      border-bottom-color: #acd6ce;
+      font-family: 'robotomedium';
+      text-transform: uppercase;
+      font-size: 1rem;
+      color: #acd6ce;
+      margin-bottom: 2.5rem;
+    }
+
+    &-btn{
+
+    }
+
+    &-view{
+      display: inline-block;
+      vertical-align: top;
+      padding: 0.9375rem 1.25rem;
+      background: #00bfa5;
+      color: #fff;
+      font-family: 'robotomedium';
+      font-size: 1rem;
+      text-decoration: none;
+      border-radius: 5px;
+      background-clip: padding-box;
+    }
+
+    &-view-icon{
+      margin-right: 0.625rem
     }
   }
-  &__title {
-    font-family: BERNIERRegular-Regular;
-    font-size: 35px;
-    color: $light_grey;
-    text-align: center;
-    line-height: 25px;
+
+  &__left, &__right {
+    float: left;
+    width: 50%;
+    height: 100vh;
+    min-height: 650px;
+
+    @include tablets{
+      float: none;
+      width: 100%;
+      height: auto;
+      min-height: 0
+    }
   }
-  &__description {
-    font-family: 'Roboto', sans-serif;
-    font-weight: 400;
-    font-size: 16px;
-    color: $light_grey;
-    text-align: center;
-    margin: 35px 0;
+  &__left{
+    background: $triangle_left;
+    position: relative
   }
-  &__text{
-    color: $light_green;
-    font-size: 20px;
+
+  &__right{
+    background: $triangle_right
   }
-  &__botton{
-    background: $light_green;
-    width: 200px;
-    height: 50px;
-    display: table;
-    margin: auto;
-    text-align: center;
-    border-radius: 10px;
+
+  &-slider{
+    width: 100%;
+    height: 100%;
+    position: relative;
+
+    &__content{
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      text-align: center;
+
+      &:before {
+        content: "";
+        display: inline-block;
+        vertical-align: middle;
+        height: 100%;
+        width: 0
+      }
+    }
+
+    &__content-wrapper{
+      display: inline-block;
+      vertical-align: middle;
+      width: 90%
+    }
+
+    &__content-inner{
+      display: inline-block;
+      vertical-align: middle
+    }
+
+    &__controls{
+
+      height: 30%;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+
+      @include tablets{
+        position: static;
+      }
+    }
+
+    &__control-list{
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0
+    }
+
+    &__control-item{
+
+    }
+
+    &___control-img{
+      display: block;
+      max-width: 70%;
+      max-height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      margin: auto;
+    }
+
+    &__control-btn{
+
+      display: block;
+      text-decoration: none;
+      width: 50%;
+      float: left;
+      position: relative;
+      height: 100%;
+      overflow: hidden;
+      outline: none !important;
+      background: #ffffff;
+      background: -moz-radial-gradient(center, ellipse cover, #fff 0%, #c5c5c5 100%);
+      background: -webkit-radial-gradient(center, ellipse cover, #fff 0%, #c5c5c5 100%);
+      background: radial-gradient(ellipse at center, #ffffff 0%, #c5c5c5 100%);
+      filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#c5c5c5', GradientType=1);
+
+      &:after {
+        content: "";
+        display: block;
+        width: 45px;
+        height: 30px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        margin: auto;
+        z-index: 2;
+        transition: transform 0.3s;
+      }
+
+      &:before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        display: block;
+        background-color: rgba(182, 180, 174, 0.7);
+        background-position: center center;
+        background-repeat: no-repeat;
+        z-index: 1
+      }
+
+      @include tablets{
+        height: 13.75rem
+      }
+    }
+
+    &__control-btn_right{
+
+      &:hover &:after {
+        animation: slideInUp .3s;
+        animation-fill-mode: forwards
+      }
+
+      &:after {
+        background-image: url("assets/img/icons/tr-top.png")
+      }
+    }
+
+    &__control-btn_left{
+
+      &:hover &:after {
+        animation: slideInDown .3s;
+        animation-fill-mode: forwards
+      }
+
+      &:after {
+        background-image: url("assets/img/icons/tr-bottom.png")
+      }
+
+    }
+
+    &__control-btn_right &__control-item.active {
+      top: 0
+    }
+
+    &__control-btn_right &__control-item {
+      position: absolute;
+      bottom: 0%;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      top: 100%
+    }
+
+    &__control-btn_left &__control-item.active {
+      top: 0
+    }
+
+    &__control-btn_left &__control-item {
+      position: absolute;
+      top: -100%;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      bottom: 0%
+    }
+
+    &__display{
+      width: 100%;
+      position: absolute;
+      left: 100%;
+      top: 0;
+      bottom: 30%;
+
+      &-pic{
+        max-width: 70%;
+        max-height: 70%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        margin: auto;
+
+        @include tablets{
+          position: static;
+        }
+      }
+
+      &-list{
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+      }
+
+      &-item{
+        height: 100%;
+        width: 100%;
+        text-align: center;
+
+        &:before {
+          content: "";
+          display: inline-block;
+          vertical-align: middle;
+          width: 0;
+          height: 100%
+        }
+
+      }
+    }
+
+    &__item-about{
+      @include tablets{
+          padding: 0 6.25rem
+      }
+    }
+  }
+
+  &__subtitle{
 
   }
-  &__link{
-    text-decoration: none;
-    @include roboto(medium);
-    color: $triangle_left;
-    font-size: 16px;
-    display: table-cell;
-    vertical-align: middle;
-    padding-right: 1rem;
-    &:hover {
-      background: rgba(#268b8b, 0.8);
-      border-radius: 10px;
-    }
+}
+.subtitle{
+  font-size: 2.1875rem;
+  color: #455a64;
+  display: inline-block;
+  vertical-align: top;
+  position: relative;
+  font-family: 'bernier_regularregular';
+  max-width: 14.375rem;
+  text-align: center;
+  margin-left: 2.8125rem;
+  margin-right: 2.8125rem;
+  margin-bottom: 2.5rem;
+
+  &:after, &:before {
+    content: "";
+    width: 22px;
+    height: 5px;
+    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=20);
+    opacity: 0.2;
+    background-color: #373e42;
+    top: 1.3125rem;
+    display: block;
+    position: absolute
   }
-  &__botton-img{
-    width: 20px;
-    height: 20px;
-    float: left;
-    fill:$triangle_left;
-    margin-left: 1rem;
+
+  &:after {
+    right: -2.625rem
+  }
+
+  &:before {
+    left: -2.625rem
+  }
+
+  @include tablets{
+    max-width: 90%
   }
 }
-.school hr{
-  border: none;
-  background-color: $light_green;
-  color: $light_green;
-  height: 2px;
-  width: 350px;
-  opacity: .3;
+
+
+.letter-span {
+  opacity: 0;
+  display: inline-block
+}
+
+.letter-span.active {
+  opacity: 1;
+  animation: bounceIn 1s;
+}
+
+.letter-word {
+  white-space: nowrap;
+  display: inline-block
+}
+@keyframes pulse {
+  from {
+    transform: scale3d(1, 1, 1)
+  }
+  50% {
+    transform: scale3d(1.05, 1.05, 1.05)
+  }
+  to {
+    transform: scale3d(1, 1, 1)
+  }
+}
+
+@-webkit-keyframes pulse {
+  from {
+    transform: scale3d(1, 1, 1)
+  }
+  50% {
+    transform: scale3d(1.05, 1.05, 1.05)
+  }
+  to {
+    transform: scale3d(1, 1, 1)
+  }
+}
+
+@keyframes bounceIn {
+  from, 20%, 40%, 60%, 80%, to {
+    animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1)
+  }
+  0% {
+    opacity: 0;
+    transform: scale3d(0.3, 0.3, 0.3)
+  }
+  20% {
+    transform: scale3d(1.1, 1.1, 1.1)
+  }
+  40% {
+    transform: scale3d(0.9, 0.9, 0.9)
+  }
+  60% {
+    opacity: 1;
+    transform: scale3d(1.03, 1.03, 1.03)
+  }
+  80% {
+    transform: scale3d(0.97, 0.97, 0.97)
+  }
+  to {
+    opacity: 1;
+    transform: scale3d(1, 1, 1)
+  }
+}
+
+@-webkit-keyframes bounceIn {
+  from, 20%, 40%, 60%, 80%, to {
+    animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1)
+  }
+  0% {
+    opacity: 0;
+    transform: scale3d(0.3, 0.3, 0.3)
+  }
+  20% {
+    transform: scale3d(1.1, 1.1, 1.1)
+  }
+  40% {
+    transform: scale3d(0.9, 0.9, 0.9)
+  }
+  60% {
+    opacity: 1;
+    transform: scale3d(1.03, 1.03, 1.03)
+  }
+  80% {
+    transform: scale3d(0.97, 0.97, 0.97)
+  }
+  to {
+    opacity: 1;
+    transform: scale3d(1, 1, 1)
+  }
+}
+
+@keyframes slideInUp {
+  from {
+    transform: translate3d(0, 0, 0)
+  }
+  to {
+    transform: translate3d(0, -100%, 0)
+  }
+}
+
+@keyframes slideInDown {
+  from {
+    transform: translate3d(0, 0%, 0)
+  }
+  to {
+    transform: translate3d(0, 100%, 0)
+  }
 }
