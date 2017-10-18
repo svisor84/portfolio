@@ -1,41 +1,41 @@
-.page-form
-    p.say-about-me__title.say-about-me__title_hyphen ЧТО ОБО МНЕ
-    p.say-about-me__title ГОВОРЯТ
-    span.say-about-me__title-img
-        svg.feedback-about__bg
-            use(xlink:href=`assets/img/sprite.svg#about_header`)
-        span.say-about-me__title__img-wrapper
-            //img.say-about-me__bg(src='assets/img/bground/portfolio_mountains-sea_1800.png' alt='text_about')
+section.section.reviews.clearfix
+    .say-about-me
+        .say-about-me__title-block
+            .say-about-me__title ЧТО ОБО МНЕ
+            .say-about-me__under-title ГОВОРЯТ
+            svg.say-about-me__bg
+                use(xlink:href=`assets/img/sprite.svg#about_header`)
+
     //- ОТЗЫВЫ
-    .reviews.clearfix
-        .reviews__left-wrapper
-            .reviews__quotes
+    .reviews-row
+        .reviews-row__left-col
+            .reviews-row__quotes
                 i(class='fa fa-quote-left' aria-hidden='true')
-            p.reviews__quote__text.
-                Этот парень проходил обучение веб-разработке не где-то, а в LoftSchool! 2 месяца только самых тяжелых испытаний и бессонных ночей!
-            .reviews__human.clearfix
-                .reviews__human__photo
-                    img.reviews__human__photo_dima(src='assets/img/content/dima.png' alt='Ковальчук Дмитрий')
-                .reviews__human__detail
-                    p.reviews__human__name Ковальчук Дмитрий
-                    p.reviews__human__about основатель Loftschool
-        .reviews__left-wrapper
-            .reviews__quotes
+            .reviews-row__text
+               | Этот парень проходил обучение веб-разработке не где-то, а в LoftSchool! 2 месяца только самых тяжелых испытаний и бессонных ночей!
+            .reviews-row__human
+                .reviews-row__human-photo
+                    img.reviews-row__human-photo_dima(src='assets/img/content/dima.jpg' alt='Ковальчук Дмитрий')
+                .reviews-row__human-detail
+                    p.reviews__human-detail_name Ковальчук Дмитрий
+                    p.reviews__human-detail_about основатель Loftschool
+        .reviews-row__right-col
+            .reviews-row__quotes
                 i(class='fa fa-quote-left' aria-hidden='true')
-            p.reviews__quote__text.
-                Этот код выдержет любые испытания. Только пожалуйста, не загружается сайт на слишком старых браузерах!
-            .reviews__human.clearfix
-                .reviews__human__photo
-                    img.reviews__human__photo_dima(src='assets/img/content/vova.png' alt='Владимир Сабанцев')
-                .reviews__human__detail
-                    p.reviews__human__name Владимир Сабанцев
-                    p.reviews__human__about преподаватель
+            .reviews-row__text
+               | Этот код выдержет любые испытания. Только пожалуйста, не загружается сайт на слишком старых браузерах!
+            .reviews-row__human
+                .reviews-row__human-photo
+                    img.reviews-row__human-photo_dima(src='assets/img/content/zar.jpg' alt='Зар Захаров')
+                .reviews-row__human-detail
+                    p.reviews-row__human-detail_name Зар Захаров
+                    p.reviews-row__human-detail_about преподаватель
         //- ФОРМА ОБРАТНОЙ СВЯЗИ
-    .feedback
-        .feedback__wrapp-blur
-            .feedback__blur
-        .feedback__wrapp-forms
-            .feedback__title СВЯЗАТЬСЯ СО МНОЙ
+    .feedback-row
+        .feedback-row__wrapp-blur
+            .feedback-row__blur
+        .feedback-row__wrapp-forms
+            .form__title СВЯЗАТЬСЯ СО МНОЙ
             form.feedback__form(action="#" class='write-me' method='#' id="form-validation")
                 .message-validation.message-validation_error
                 //-Hidden Required Fields
@@ -47,8 +47,10 @@
                 input.form__style.form__style_email(type="email" name='form_email' placeholder="Email" )
                 textarea.form__style.form__style_message(rows='6', cols='50', name='form_subject', placeholder='Ваше сообщение')
                 .form__btn.clearfix
-                    input.form__btn__item.form__btn__item_submit(name='submit', type='submit', value='Отправить')
-                    input.form__btn__item.form__btn__item_clear(name='clear', type='reset', value='Очистить')
+                    input.form-btn__item.form-btn__item_submit(name='submit', type='submit', value='Отправить')
+                    input.form-btn__item.form-btn__item_clear(name='clear', type='reset', value='Очистить')
     //- КОНЕЦ ФОРМЫ
-    a(href='#' class='page-up page-up_arrow')
-        i(class='fa fa-chevron-up' aria-hidden='true')
+    .page-up
+        a(href='#' class='page-up__link')
+            svg.page-up__chevron-up_bg
+                use(xlink:href=`assets/img/sprite.svg#portf_arrow_up`)

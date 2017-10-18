@@ -7,7 +7,8 @@ global.$ = {
         task: require('./gulp/paths/tasks.js'),
         jsFoundation: require('./gulp/paths/js.foundation.js'),
         cssFoundation: require('./gulp/paths/css.foundation.js'),
-        app: require('./gulp/paths/app.js')
+        app: require('./gulp/paths/app.js'),
+        button_app: require('./gulp/paths/button_app.js')
     },
     gulp: require('gulp'),
     del: require('del'),
@@ -18,7 +19,7 @@ global.$ = {
     babel : require('babelify'),
     browserSync: require('browser-sync').create(),
     fs: require('fs'),
-    gp: require('gulp-load-plugins')()
+    gp: require('gulp-load-plugins')(),
 };
 
 $.path.task.forEach(function(taskPath) {

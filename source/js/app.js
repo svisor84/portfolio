@@ -89,72 +89,74 @@ function init() {
 // вызов меню
 let toggle = document.querySelector('#toggle');
 let overlay = document.querySelector('#overlay');
-toggle.addEventListener('click', function(){
-    let cross = toggle.getAttribute('class');
-    if(cross !== "hamburger cross active"){
-        toggle.setAttribute('class','hamburger cross active');
-        overlay.setAttribute('class', 'overlay open');
-        toggle.style.position = 'fixed';
-    }
-    else{
-        toggle.setAttribute('class','hamburger');
-        overlay.setAttribute('class','overlay');
-        toggle.style.position = 'absolute';
-    }
+if(toggle && overlay) {
+    toggle.addEventListener ('click', function () {
+        let cross = toggle.getAttribute ('class');
+        if (cross !== "hamburger cross active") {
+            toggle.setAttribute ('class', 'hamburger cross active');
+            overlay.setAttribute ('class', 'overlay open');
+            toggle.style.position = 'fixed';
+        }
+        else {
+            toggle.setAttribute ('class', 'hamburger');
+            overlay.setAttribute ('class', 'overlay');
+            toggle.style.position = 'absolute';
+        }
 
-},false);
+    }, false);
+}
 
 //////////////////////slider
 
-let aviatitle = {
-    generate: function (string, block) {
-        let wordsArray = string.split(' '),
-            stringArray = string.split(''),
-            sentence = [],
-            word = '';
+    let aviatitle = {
+        generate: function (string, block) {
+            let wordsArray = string.split (' '),
+                stringArray = string.split (''),
+                sentence = [],
+                word = '';
 
-        block.text('');
+            block.text ('');
 
-        wordsArray.forEach(function (currentWord) {
-            let wordsArray = currentWord.split('');
+            wordsArray.forEach (function (currentWord) {
+                let wordsArray = currentWord.split ('');
 
-            wordsArray.forEach(function (letter) {
-                let letterHtml = '<span class="letter-span">' + letter + '</span>';
+                wordsArray.forEach (function (letter) {
+                    let letterHtml = '<span class="letter-span">' + letter + '</span>';
 
-                word += letterHtml;
+                    word += letterHtml;
+                });
+
+                let wordHTML = '<span class="letter-word">' + word + '</span>'
+
+                sentence.push (wordHTML);
+                word = '';
             });
 
-            let wordHTML = '<span class="letter-word">' + word + '</span>'
+            block.append (sentence.join (' '));
 
-            sentence.push(wordHTML);
-            word = '';
-        });
+            // анимация появления
+            let letters = block.find ('.letter-span'),
+                counter = 0,
+                timer,
+                duration = 500 / stringArray.length;
 
-        block.append(sentence.join(' '));
+            function showLetters () {
+                let currentLetter = letters.eq (counter);
 
-        // анимация появления
-        let letters = block.find('.letter-span'),
-            counter = 0,
-            timer,
-            duration = 500 / stringArray.length;
+                currentLetter.addClass ('active');
+                counter++;
 
-        function showLetters() {
-            let currentLetter = letters.eq(counter);
+                if (typeof timer !== 'undefined') {
+                    clearTimeout (timer);
+                }
 
-            currentLetter.addClass('active');
-            counter++;
-
-            if (typeof timer !== 'undefined') {
-                clearTimeout(timer);
+                timer = setTimeout (showLetters, duration);
             }
 
-            timer = setTimeout(showLetters, duration);
+            showLetters ();
+
         }
-
-        showLetters();
-
-    }
-};
+    };
 
 
 let Slider = function (container) {
@@ -172,7 +174,6 @@ let Slider = function (container) {
     let timeout;
 
     this.counter = 0;
-
     // private Генерация разметки кнопки следующий слайд
     let generateMarkups = function () {
 
@@ -183,9 +184,9 @@ let Slider = function (container) {
             .append(markups)
             .find('.works-slider__control-item')
             .removeClass('active')
-            .eq(this.counter + 1)
+            .eq($(this).counter + 1)
             .addClass('active');
-    }
+    };
     // Вытащить данные из дата атрибутов для левой части слайдера
     let getDataArrays = function () {
         let dataObject = {
@@ -380,6 +381,67 @@ let Slider = function (container) {
     };
 };
 
+
+
+//////flipper
+function ready(){
+    let flipperButton = document.querySelector(".authorize");
+
+    flipperButton.addEventListener("click",function () {
+        document.querySelector('#flip-toggle').classList.toggle('hover');
+    })
+}
+document.addEventListener("DOMContentLoaded", ready);
+
+
+
+///////parallax
+
+let parallax = (function(){
+    let bg = document.querySelector(".hero__bg");
+    let user = document.querySelector(".user");
+    let sectionText = document.querySelector(".hero__title-pic");
+
+    return {
+        move: function(block, windowScroll, strafeAmount,x=0,y=0){
+
+            let strafe = (windowScroll / -strafeAmount ) + y + '%';
+            let transformString = 'translate3d('+ x +'%,' + strafe +',0)';
+
+            let style = block.style;
+
+            style.transform = transformString;
+            style.webkittransform = transformString;
+        },
+        init: function(wScroll){
+            this.move(bg,wScroll,30,0,0);
+            this.move(user,wScroll,3,-50,-50);
+            this.move(sectionText,wScroll,5,-50,-50);
+        }
+    }
+
+}());
+
+window.onscroll = function(){
+    let wScroll = window.pageYOffset;
+    parallax.init(wScroll);
+};
+//паралакс на движение мышки
+// window.addEventListener('mousemove', function(e){
+//    let pageX = e.pageX,
+//        pageY = e.pageY,
+//        initialX = (window.innerWidth / 3) - pageX,
+//        initialY = (window.innerWidth / 3) - pageY,
+//        positionX = initialX * 0.1,
+//        positionY = initialY * 0.1,
+//        bg = document.querySelector(".hero__bg"),
+//        bgStyle = bg.style,
+//        transformString = 'translate3d(' + positionX + 'px,'+ positionY +'px,0)';
+//    bgStyle.transform = transformString;
+// });
+
+
+//запускаем слайдер, проверить код, ниже данного кода ничего не срабатывает
 let slider = new Slider($('.works'));
 slider.setDefaults();
 

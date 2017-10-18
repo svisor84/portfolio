@@ -34,8 +34,8 @@
   &__bg{
     opacity: 0.1;
     position: relative;
-    left: -30%;
-    width: 751px;
+    width: 100%;
+    display: block;
     top: -180px;
     height: 215px;
   }
@@ -73,6 +73,12 @@
     height: 80px;
     border-radius: 50%;
     overflow: hidden;
+
+    &_dima, &_zar{
+      display: block;
+      max-width: 100%;
+      height: auto;
+    }
   }
   &__human-detail {
     float: left;

@@ -1,39 +1,43 @@
-section.section.my-works
+section.section.works-head
     .triangle-section
         svg.triangle.triangle-left(xmlns='http://www.w3.org/2000/svg', viewbox='0 0 1000 110', preserveaspectratio='none')
-            polygon(points='0,0   0,110   500,110').triangle-left
+            polygon(points='0,0   0,110   1000, 110')
         svg.triangle.triangle-right(xmlns='http://www.w3.org/2000/svg', viewbox='0 0 1000 110', preserveaspectratio='none')
-            polygon(points='500,110   1000,110   1000,0').triangle-right
-    .my-works__title МОИ РАБОТЫ
-        span.my-works__title-img
-            svg.works__bg
-                use(xlink:href=`assets/img/sprite.svg#works_header`)
-    .my-works-blocks.clearfix
-        .my-works-blocks__left.clearfix
-            .school
-                p.school__title.school__title_hyphen САЙТ ШКОЛЫ ОНЛАЙН
-                p.school__title ОБРАЗОВАНИЯ
-                .school__description
-                    hr.line
-                    p.school__text HTML CSS JAVASCRIPT
-                    hr.line
-                .school__botton
-                    a(href=`//loftschool.com/` target=`_blank`).school__link Посмотреть сайт
-                        svg.school__botton-img
-                            use(xlink:href=`assets/img/sprite.svg#link`)
-        .my-works-blocks__right.clearfix
-            .slider
-                .slider__view
-                    img(src=`../../assets/img/workss/works-1.png`).slider__view_pic
-                .slider__arrow
-                    a(href=`#`).slider__arrow_left
-                        .slider__arrow-wrapper-left
-                            .slider__shadow
-                                svg.arrow-chevron
-                                    use(xlink:href=`assets/img/sprite.svg#portf_arrow_down`)
-                    a(href=`#`).slider__arrow_right
-                        .slider__arrow-wrapper-right
-                            .slider__shadow
-                                svg.arrow-chevron
-                                    use(xlink:href=`assets/img/sprite.svg#portf_arrow_up`)
+            polygon(points='0,110   1000,110   1000,0')
+    .section-title
+        | МОИ РАБОТЫ
+        svg.works-head__bg
+            use(xlink:href=`assets/img/sprite.svg#works_header`)
 
+section.section.works
+    .works__content
+        .works__left
+            .works-slider__content
+                .works-slider__content-wrapper
+                    .works-slider__display
+                        img(src="" alt="").works-slider__display-pic
+                    .works-slider__item-about
+                        .works__subtitle
+                            .subtitle
+                        .works__content-desc
+                        .works__content-btn
+                            a(href="#").works__content-view Посмотреть сайт
+                                i.works__content-view-icon
+        .works__right
+            .works-slider
+                .works-slider__controls
+                    a(href="#").works-slider__control-btn.works-slider__control-btn_left
+                        ul.works-slider__control-list
+                            li(data-full="assets/img/works/work-1.png" data-title="Агентсво интернет решений \"ITLoft\""
+                            data-skills="node" data-link="http://itloft.ru/").works-slider__control-item
+                                img(src="assets/img/works/work-1.png").works-slider___control-img
+                            li(data-full="assets/img/works/work-2.png" data-title="Школа онлай-образования \"LoftSchool\""
+                            data-skills="html5, CSS3, javascript, php" data-link="http://loftschool.com/").works-slider__control-item
+                                img(src="assets/img/works/work-2.png").works-slider___control-img
+                            li(data-full="assets/img/works/work-3.png" data-title="Портал обучающих уроков \"LoftBlog\""
+                            data-skills="Ruby on Rails, javascript, RESTful" data-link="http://loftblog.ru/").works-slider__control-item
+                                img(src="assets/img/works/work-3.png").works-slider___control-img
+                            li(data-full="assets/img/works/work-4.png" data-title="Сайт \"Атма йога\"" data-skills="UX, design, seo"
+                            data-link="http://atmayoga.ru/").works-slider__control-item
+                                img(src="assets/img/works/work-4.png").works-slider___control-img
+                    a(href="#").works-slider__control-btn.works-slider__control-btn_right

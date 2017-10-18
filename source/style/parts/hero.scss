@@ -5,6 +5,9 @@
   &__bg{
     @include centered(x);
     width: 100%;
+    left: 0;
+    position: absolute;
+    transform: translateX(0);
   }
   &__bg-img{
     width: 1900px;
