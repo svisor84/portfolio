@@ -29,7 +29,19 @@
     margin: 40px 38px 50px 0;
   }
 }
-
+.skill_name{
+  position: absolute;
+  top: 48px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  @include phones{
+    top: 65px;
+    bottom: 0;
+    left: 35px;
+    right: 0;
+  }
+}
 .prog {
   font-size: 28px;
   font-family: 'Roboto', sans-serif;
@@ -52,10 +64,13 @@
     text-align: center;
     vertical-align: middle;
     margin-right: 40px;
-    padding: 47px 0;
+    //padding: 47px 0;
     margin-bottom: 40px;
     &:last-child {
       margin-right: 0;
+      @include phones{
+        margin-bottom: 60px;
+      }
     }
     &__js {
       position: absolute;
@@ -74,57 +89,76 @@
   }
 }
 
-.circle {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  margin: -55px 0 0 -55px;
-  width: 110px;
-  height: 110px;
+.circles {
   fill: none;
   stroke-width: 20;
-  &__out {
-    stroke: #ccc;
-    r: 45;
-    cx: 50%;
-    cy: 50%;
-    fill: none;
-  }
-  &__in {
-    stroke: #00bfa5;
-    r: 45;
-    cx: 50%;
-    cy: 50%;
-    transform: rotate(90deg, 50%, 50%);
-    &_html {
-      stroke-dasharray: 230.6 314;
-    }
-    &_css {
-      stroke-dasharray: 230.6 314;
-    }
-    &_js {
-      stroke-dasharray: 143.6 314;
-    }
-    &_php {
-      stroke-dasharray: 2.6 314;
-    }
-    &_sql {
-      stroke-dasharray: 0.6 314;
-    }
-    &_node {
-      stroke-dasharray: 60.6 314;
-    }
-    &_mongo {
-      stroke-dasharray: 0.6 314;
-    }
-    &_git {
-      stroke-dasharray: 143.6 314;
-    }
-    &_gulp {
-      stroke-dasharray: 143.6 314;
-    }
-    &_bower {
-      stroke-dasharray: 80.6 314;
-    }
-  }
+}
+.circle__first {
+  stroke: #dfdcd5;
+}
+.circle__second {
+  stroke: #1bb696;
+  stroke-dasharray: .0010 282.6;
+  transition: all 1s;
+}
+
+.circles:hover .circle-0 {
+  stroke-dasharray: .001 282.6;
+}
+.circles:hover .circle-10 {
+  stroke-dasharray: 28.26 282.6;
+}
+.circles:hover .circle-15 {
+  stroke-dasharray: 42.39 282.6;
+}
+.circles:hover .circle-20 {
+  stroke-dasharray: 56.52 282.6;
+}
+.circles:hover .circle-25 {
+  stroke-dasharray: 70.65 282.6;
+}
+.circles:hover .circle-30 {
+  stroke-dasharray: 84.78 282.6;
+}
+.circles:hover .circle-35 {
+  stroke-dasharray: 98.91 282.6;
+}
+.circles:hover .circle-40 {
+  stroke-dasharray: 113.04 282.6;
+}
+.circles:hover .circle-45 {
+  stroke-dasharray: 127.17 282.6;
+}
+.circles:hover .circle-50 {
+  stroke-dasharray: 141.3 282.6;
+}
+.circles:hover .circle-55 {
+  stroke-dasharray: 155.43 282.6;
+}
+.circles:hover .circle-60 {
+  stroke-dasharray: 169.56 282.6;
+}
+.circles:hover .circle-65 {
+  stroke-dasharray: 183.69 282.6;
+}
+.circles:hover .circle-70 {
+  stroke-dasharray: 197.82 282.6;
+}
+.circles:hover .circle-75 {
+  stroke-dasharray: 211.95 282.6;
+}
+.circles:hover .circle-80 {
+  stroke-dasharray: 226.08 282.6;
+}
+.circles:hover .circle-85 {
+  stroke-dasharray: 240.21 282.6;
+}
+.circles:hover .circle-90 {
+  stroke-dasharray: 254.34 282.6;
+}
+.circles:hover .circle-95 {
+  stroke-dasharray: 268.47 282.6;
+}
+.circles:hover .circle-100 {
+  stroke-dasharray: 282.6 282.6;
 }
