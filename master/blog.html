@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width">
+    <link href="assets/css/app.css" rel="stylesheet">
+    <link href="assets/css/foundation.css" rel="stylesheet">
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBRTCjsDL12rMVmvbFEeI7U_ExPg7u0Fmo" defer></script>
+    <script src="assets/js/foundation.js" defer></script>
+    <script src="assets/js/app.js" defer></script>
+    <script src="https://use.fontawesome.com/39cc26029e.js" defer></script>
+    <title>Мои работы</title>
+  </head>
+  <body>
+    <section class="section hero">
+      <div class="hero__bg"><img class="hero__bg-img" src="/assets/img/bground/welcome_mountains_1800.png" alt=""></div>
+      <div class="header-navigation">
+        <ul class="social">
+          <li class="social__item"><a class="social__link" href="#">
+              <svg class="social__icon">
+                <use xlink:href="assets/img/sprite.svg#vk"></use>
+              </svg></a></li>
+          <li class="social__item"><a class="social__link" href="#">
+              <svg class="social__icon">
+                <use xlink:href="assets/img/sprite.svg#github"></use>
+              </svg></a></li>
+        </ul>
+        <div class="hamburger" id="toggle">
+          <svg class="hamburger-button" viewBox="0 0 800 600">
+            <path d="M300,220 C300,220 520,220 540,220 C740,220 640,540 520,420 C440,340 300,200 300,200" id="top" stroke="white" stroke-width="3" fill="none"></path>
+            <path d="M300,320 L540,320" id="middle" stroke="white" stroke-width="3"></path>
+            <path d="M300,210 C300,210 520,210 540,210 C740,210 640,530 520,410 C440,330 300,190 300,190" id="bottom" transform="translate(480, 320) scale(1, -1) translate(-480, -318)" stroke="white" stroke-width="3" fill="none"></path>
+          </svg>
+        </div>
+        <div class="overlay" id="overlay">
+          <nav class="overlay-menu">
+            <ul class="menu__list">
+              <li class="menu__list__item"><a class="menu__list__link" href="portfolio.html">Мои работы</a></li>
+              <li class="menu__list__item"><a class="menu__list__link" href="about.html">Обо мне</a></li>
+              <li class="menu__list__item"><a class="menu__list__link" href="blog.html">Блог</a></li>
+              <li class="menu__list__item"><a class="menu__list__link" href="index.html">Авторизация</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+      <div class="hero__container">
+        <svg class="hero__title-pic">
+          <use xlink:href="assets/img/sprite.svg#portfolio_header"></use>
+        </svg>
+        <div class="user">
+          <div class="user__pic-container"><img class="user__pic" src="assets/img/avatar/iam.jpeg" alt="Станислав Мухин"></div>
+          <h1 class="user__name">Станислав Мухин</h1>
+          <p class="user__desc">Личный сайт разработчика</p>
+        </div>
+        <!--.page-down-->
+        <!--    a(href='#')-->
+        <!--        svg.chevron-down__bg-->
+        <!--            use(xlink:href=`assets/img/sprite.svg#portf_arrow_down`)-->
+      </div>
+    </section>
+    <div class="content-conteiner">
+    </div>
+    <footer class="page-footer">
+      <div class="footer-nav_wrapper clearfix">
+        <ul class="footer-nav">
+          <li class="footer-nav__item"><a class="footer-nav__link" href="portfolio.html">Мои работы</a></li>
+          <li class="footer-nav__item"><a class="footer-nav__link" href="about.html">Обо мне</a></li>
+          <li class="footer-nav__item"><a class="footer-nav__link" href="blog.html">Блог</a></li>
+          <li class="footer-nav__item"><a class="footer-nav__link" href="index.html">Авторизация</a></li>
+        </ul>
+        <ul class="footer-social">
+          <li class="footer-social__item"><a class="footer-social__link" href="#">
+              <svg class="footer-social_social-icon">
+                <use xlink:href="assets/img/sprite.svg#vk_round"></use>
+              </svg></a></li>
+          <li class="footer-social__item"><a class="footer-social__link" href="#">
+              <svg class="footer-social_social-icon">
+                <use xlink:href="assets/img/sprite.svg#github_round"></use>
+              </svg></a></li>
+        </ul>
+      </div>
+      <div class="footer__about_wrapper clearfix">
+        <p class="footer__about">Я веб разработчик из Одинцово и этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool.</p>
+      </div>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width">
+    <link href="assets/css/app.css" rel="stylesheet">
+    <link href="assets/css/foundation.css" rel="stylesheet">
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBRTCjsDL12rMVmvbFEeI7U_ExPg7u0Fmo" defer></script>
+    <script src="assets/js/foundation.js" defer></script>
+    <script src="assets/js/app.js" defer></script>
+    <script src="https://use.fontawesome.com/39cc26029e.js" defer></script>
+    <title>Мои работы</title>
+  </head>
+  <body>
+    <div class="content-conteiner">
+      <div class="wrapper">
+        <section class="section hero">
+          <div class="hero__bg"><img class="hero__bg-img" src="/assets/img/bground/welcome_mountains_1800.png" alt=""></div>
+          <div class="header-navigation">
+            <ul class="social">
+              <li class="social__item"><a class="social__link" href="#">
+                  <svg class="social__icon">
+                    <use xlink:href="assets/img/sprite.svg#vk"></use>
+                  </svg></a></li>
+              <li class="social__item"><a class="social__link" href="#">
+                  <svg class="social__icon">
+                    <use xlink:href="assets/img/sprite.svg#github"></use>
+                  </svg></a></li>
+            </ul>
+            <div class="hamburger" id="toggle">
+              <svg class="hamburger-button" viewBox="0 0 800 600">
+                <path d="M300,220 C300,220 520,220 540,220 C740,220 640,540 520,420 C440,340 300,200 300,200" id="top" stroke="white" stroke-width="3" fill="none"></path>
+                <path d="M300,320 L540,320" id="middle" stroke="white" stroke-width="3"></path>
+                <path d="M300,210 C300,210 520,210 540,210 C740,210 640,530 520,410 C440,330 300,190 300,190" id="bottom" transform="translate(480, 320) scale(1, -1) translate(-480, -318)" stroke="white" stroke-width="3" fill="none"></path>
+              </svg>
+            </div>
+            <div class="overlay" id="overlay">
+              <nav class="overlay-menu">
+                <ul class="menu__list">
+                  <li class="menu__list__item"><a class="menu__list__link" href="portfolio.html">Мои работы</a></li>
+                  <li class="menu__list__item"><a class="menu__list__link" href="about.html">Обо мне</a></li>
+                  <li class="menu__list__item"><a class="menu__list__link" href="blog.html">Блог</a></li>
+                  <li class="menu__list__item"><a class="menu__list__link" href="index.html">Авторизация</a></li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+          <div class="hero__container">
+            <svg class="hero__title-pic">
+              <use xlink:href="assets/img/sprite.svg#portfolio_header"></use>
+            </svg>
+            <div class="user">
+              <div class="user__pic-container"><img class="user__pic" src="assets/img/avatar/iam.jpeg" alt="Станислав Мухин"></div>
+              <h1 class="user__name">Станислав Мухин</h1>
+              <p class="user__desc">Личный сайт разработчика</p>
+            </div>
+            <!--.page-down-->
+            <!--    a(href='#')-->
+            <!--        svg.chevron-down__bg-->
+            <!--            use(xlink:href=`assets/img/sprite.svg#portf_arrow_down`)-->
+          </div>
+        </section>
+        <section class="section works-head">
+          <div class="triangle-section">
+            <svg class="triangle triangle-left" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 1000 110" preserveaspectratio="none">
+              <polygon points="0,0   0,110   1000, 110"></polygon>
+            </svg>
+            <svg class="triangle triangle-right" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 1000 110" preserveaspectratio="none">
+              <polygon points="0,110   1000,110   1000,0"></polygon>
+            </svg>
+          </div>
+          <div class="section-title">МОИ РАБОТЫ
+            <svg class="works-head__bg">
+              <use xlink:href="assets/img/sprite.svg#works_header"></use>
+            </svg>
+          </div>
+        </section>
+        <section class="section works">
+          <div class="works__content">
+            <div class="works__left">
+              <div class="works-slider__content">
+                <div class="works-slider__content-wrapper">
+                  <div class="works-slider__display"><img class="works-slider__display-pic" src="" alt=""></div>
+                  <div class="works-slider__item-about">
+                    <div class="works__subtitle">
+                      <div class="subtitle"></div>
+                    </div>
+                    <div class="works__content-desc"></div>
+                    <div class="works__content-btn"><a class="works__content-view" href="#">Посмотреть сайт<i class="works__content-view-icon"></i></a></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="works__right">
+              <div class="works-slider">
+                <div class="works-slider__controls"><a class="works-slider__control-btn works-slider__control-btn_left" href="#">
+                    <ul class="works-slider__control-list">
+                      <li class="works-slider__control-item" data-full="assets/img/works/work-1.png" data-title="Агентсво интернет решений &quot;ITLoft&quot;" data-skills="node" data-link="http://itloft.ru/"><img class="works-slider___control-img" src="assets/img/works/work-1.png"></li>
+                      <li class="works-slider__control-item" data-full="assets/img/works/work-2.png" data-title="Школа онлай-образования &quot;LoftSchool&quot;" data-skills="html5, CSS3, javascript, php" data-link="http://loftschool.com/"><img class="works-slider___control-img" src="assets/img/works/work-2.png"></li>
+                      <li class="works-slider__control-item" data-full="assets/img/works/work-3.png" data-title="Портал обучающих уроков &quot;LoftBlog&quot;" data-skills="Ruby on Rails, javascript, RESTful" data-link="http://loftblog.ru/"><img class="works-slider___control-img" src="assets/img/works/work-3.png"></li>
+                      <li class="works-slider__control-item" data-full="assets/img/works/work-4.png" data-title="Сайт &quot;Атма йога&quot;" data-skills="UX, design, seo" data-link="http://atmayoga.ru/"><img class="works-slider___control-img" src="assets/img/works/work-4.png"></li>
+                    </ul></a><a class="works-slider__control-btn works-slider__control-btn_right" href="#"></a></div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="section reviews clearfix">
+          <div class="say-about-me">
+            <div class="say-about-me__title-block">
+              <div class="say-about-me__title">ЧТО ОБО МНЕ</div>
+              <div class="say-about-me__under-title">ГОВОРЯТ</div>
+              <svg class="say-about-me__bg">
+                <use xlink:href="assets/img/sprite.svg#about_header"></use>
+              </svg>
+            </div>
+          </div>
+          <div class="reviews-row">
+            <div class="reviews-row__left-col">
+              <div class="reviews-row__quotes"><i class="fa fa-quote-left" aria-hidden="true"></i></div>
+              <div class="reviews-row__text">Этот парень проходил обучение веб-разработке не где-то, а в LoftSchool! 2 месяца только самых тяжелых испытаний и бессонных ночей!</div>
+              <div class="reviews-row__human">
+                <div class="reviews-row__human-photo"><img class="reviews-row__human-photo_dima" src="assets/img/content/dima.jpg" alt="Ковальчук Дмитрий"></div>
+                <div class="reviews-row__human-detail">
+                  <p class="reviews__human-detail_name">Ковальчук Дмитрий</p>
+                  <p class="reviews__human-detail_about">основатель Loftschool</p>
+                </div>
+              </div>
+            </div>
+            <div class="reviews-row__right-col">
+              <div class="reviews-row__quotes"><i class="fa fa-quote-left" aria-hidden="true"></i></div>
+              <div class="reviews-row__text">Этот код выдержет любые испытания. Только пожалуйста, не загружается сайт на слишком старых браузерах!</div>
+              <div class="reviews-row__human">
+                <div class="reviews-row__human-photo"><img class="reviews-row__human-photo_dima" src="assets/img/content/zar.jpg" alt="Зар Захаров"></div>
+                <div class="reviews-row__human-detail">
+                  <p class="reviews-row__human-detail_name">Зар Захаров</p>
+                  <p class="reviews-row__human-detail_about">преподаватель</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="feedback-row">
+            <div class="feedback-row__wrapp-blur">
+              <div class="feedback-row__blur"></div>
+            </div>
+            <div class="feedback-row__wrapp-forms">
+              <div class="form__title">СВЯЗАТЬСЯ СО МНОЙ</div>
+              <form class="feedback__form write-me" action="#" method="#" id="form-validation">
+                <div class="message-validation message-validation_error"></div>
+                <input type="hidden" name="project_name" value="Portfolio">
+                <input type="hidden" name="admin_email" value="stnslvmukhin@gmail.com">
+                <input type="hidden" name="form_subject" value="Form work">
+                <input class="form__style form__style_name" type="text" name="form_name" placeholder="Имя">
+                <input class="form__style form__style_email" type="email" name="form_email" placeholder="Email">
+                <textarea class="form__style form__style_message" rows="6" cols="50" name="form_subject" placeholder="Ваше сообщение"></textarea>
+                <div class="form__btn clearfix">
+                  <input class="form-btn__item form-btn__item_submit" name="submit" type="submit" value="Отправить">
+                  <input class="form-btn__item form-btn__item_clear" name="clear" type="reset" value="Очистить">
+                </div>
+              </form>
+            </div>
+          </div>
+          <div class="page-up"><a class="page-up__link" href="#">
+              <svg class="page-up__chevron-up_bg">
+                <use xlink:href="assets/img/sprite.svg#portf_arrow_up"></use>
+              </svg></a></div>
+        </section>
+        <footer class="page-footer">
+          <div class="footer-nav_wrapper clearfix">
+            <ul class="footer-nav">
+              <li class="footer-nav__item"><a class="footer-nav__link" href="portfolio.html">Мои работы</a></li>
+              <li class="footer-nav__item"><a class="footer-nav__link" href="about.html">Обо мне</a></li>
+              <li class="footer-nav__item"><a class="footer-nav__link" href="blog.html">Блог</a></li>
+              <li class="footer-nav__item"><a class="footer-nav__link" href="index.html">Авторизация</a></li>
+            </ul>
+            <ul class="footer-social">
+              <li class="footer-social__item"><a class="footer-social__link" href="#">
+                  <svg class="footer-social_social-icon">
+                    <use xlink:href="assets/img/sprite.svg#vk_round"></use>
+                  </svg></a></li>
+              <li class="footer-social__item"><a class="footer-social__link" href="#">
+                  <svg class="footer-social_social-icon">
+                    <use xlink:href="assets/img/sprite.svg#github_round"></use>
+                  </svg></a></li>
+            </ul>
+          </div>
+          <div class="footer__about_wrapper clearfix">
+            <p class="footer__about">Я веб разработчик из Одинцово и этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool.</p>
+          </div>
+        </footer>
+      </div>
+    </div>
+  </body>
+</html>
